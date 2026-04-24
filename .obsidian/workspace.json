@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "530eab11b88bd3db",
+    "type": "split",
+    "children": [
+      {
+        "id": "0f4004f4fa91e6c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2b8287d9b886bee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "knowledge-base/guides/developer-environment-setup.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "developer-environment-setup"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80c6722602ab73e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce37668c6916367c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eb018de838d6e94d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "c064e8ac5420baad",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "d55b911af24687c4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 365.5
+  },
+  "right": {
+    "id": "41d3d7bcba2d1fea",
+    "type": "split",
+    "children": [
+      {
+        "id": "176c80d9bb23bcd4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e63dc52d7ac3b0bb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "knowledge-base/guides/developer-environment-setup.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de developer-environment-setup"
+            }
+          },
+          {
+            "id": "3551b47e87e340e6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "knowledge-base/guides/developer-environment-setup.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de developer-environment-setup"
+            }
+          },
+          {
+            "id": "41dae7688e29c04b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "9ea4e9e757e35ed8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "7a7b11a9c6612a93",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "knowledge-base/guides/developer-environment-setup.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de developer-environment-setup"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "e2b8287d9b886bee",
+  "lastOpenFiles": [
+    "knowledge-base/test",
+    "knowledge-base/instructions/init-workflow.md",
+    "knowledge-base/guides/developer-environment-setup.md",
+    "knowledge-base/guides",
+    "knowledge-base/instructions/developer-environment-setup.md",
+    "knowledge-base/features",
+    "knowledge-base/human-guide",
+    "knowledge-base/agents/staff-engineer.agent.md",
+    "knowledge-base/agents/backend-developer.agent.md",
+    "knowledge-base/agents/qa-engineer.agent.md",
+    "knowledge-base/skills/index.md",
+    "skills/get-azure-work-item.md",
+    "knowledge-base/skills/get-azure-work-item.skill.md",
+    "knowledge-base/prompts/research.prompt.md",
+    "knowledge-base/prompts/init-codespace.prompt.md",
+    "knowledge-base/prompts/index.md",
+    "knowledge-base/instructions/research-instructions.md",
+    "create-feature.md",
+    "init-codespace.md",
+    "knowledge-base/prompts/create-feature.prompt.md",
+    "knowledge-base/prompts/compress-context.prompt.md",
+    "knowledge-base/instructions/context-compression.md",
+    "knowledge-base/instructions/index.md",
+    "knowledge-base/instructions/agent-prompting.md",
+    "knowledge-base/instructions/feature-workflow.md",
+    "knowledge-base/instructions/git-conventions.md",
+    "knowledge-base/instructions/principles.md",
+    "knowledge-base/instructions/project-structure.md",
+    "knowledge-base/instructions/testing-strategy.md",
+    "skills",
+    "Universidad de palermo/Higiene&Seguridad/1-LegislacionVigente.pdf"
+  ]
+}
