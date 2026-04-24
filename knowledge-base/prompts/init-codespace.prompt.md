@@ -47,7 +47,7 @@ Ask the human the following questions. Wait for all answers before generating an
 2. Is the detected tech stack correct? Any corrections or additions?
 3. Where should the feature folder live? *(confirm a candidate or specify the path)*
 4. Are there any repo-specific conventions that override the global instructions?
-5. What is the absolute path to the Document Hub on this machine? *(e.g. `C:\git\obsidian\work\Document Hub`)*
+5. What is the internal path within your vault? *(the folders between `obsidian\` and `knowledge-base\` — e.g. `document-hub`)*
 6. *(If submodules were detected)* What does each submodule provide? What shared logic or contracts does this repo consume from it?
 
 > Do not invent answers. If the human skips a question, leave the corresponding section as a clearly marked placeholder.
@@ -62,7 +62,7 @@ Using the confirmed answers, produce both files using the templates defined in `
 Use template section 3a. Substitute all `{placeholders}` with confirmed values. Include the Submodules section only if submodules are present.
 
 **File 2 — `{repo-name}.code-workspace`** (at repository root)
-Use template section 3b. Set `{repo-name}` and `{absolute-path-to-document-hub}` from Phase 2 answers. On Windows, use double backslashes (`\\`) in the JSON path.
+Use template section 3b. Set `{repo-name}` and `{your-internal-path}` from Phase 2 answers.
 
 **Present both files in full to the human before writing anything to disk.**
 

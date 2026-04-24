@@ -77,7 +77,7 @@ Present the Discovery Summary and ask the human to confirm or correct:
 | What is the tech stack? (confirm or correct detected stack) | Goes into the Stack section |
 | Where should the feature folder live? (confirm candidate or specify path) | Used by `feature-workflow.md` for all feature documents |
 | Are there any repo-specific conventions that override the global instructions? | Goes into the Repo-Specific Conventions section |
-| What is the absolute path to the Document Hub on this machine? | Used in the `.code-workspace` file to mount the knowledge base |
+| What is the internal path within your vault? (the folders between `obsidian\` and `knowledge-base\`, e.g. `document-hub`) | Used to build the relative path in the `.code-workspace` settings |
 | *(If submodules detected)* What does each submodule provide? What shared logic or contracts does this repo consume from them? | Goes into the Submodules section — critical context for agents writing code that touches shared logic |
 
 > The agent must not invent answers. If the human does not answer a question, leave the corresponding section as a clearly marked placeholder.
@@ -198,27 +198,29 @@ Save this file as **`{repo-name}.code-workspace`** at the repository root (or on
     {
       "name": "{repo-name}",
       "path": "."
-    },
-    {
-      "name": "knowledge-base",
-      "path": "{absolute-path-to-document-hub}\\knowledge-base"
     }
   ],
   "settings": {
+    "chat.agentFilesLocations": {
+      "../obsidian/{your-internal-path}/knowledge-base/agents": true
+    },
+    "chat.instructionsFilesLocations": {
+      "../obsidian/{your-internal-path}/knowledge-base/instructions": true
+    },
     "chat.promptFilesLocations": {
-      "prompts": true
+      "../obsidian/{your-internal-path}/knowledge-base/prompts": true
     },
     "github.copilot.chat.codeGeneration.instructions": [
-      { "file": "knowledge-base/instructions/coding-style.md" },
-      { "file": "knowledge-base/instructions/principles.md" }
+      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/coding-style.md" },
+      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/principles.md" }
     ],
     "github.copilot.chat.testGeneration.instructions": [
-      { "file": "knowledge-base/instructions/testing-strategy.md" },
-      { "file": "knowledge-base/instructions/coding-style.md" }
+      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/testing-strategy.md" },
+      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/coding-style.md" }
     ],
     "github.copilot.chat.reviewSelection.instructions": [
-      { "file": "knowledge-base/instructions/coding-style.md" },
-      { "file": "knowledge-base/instructions/principles.md" }
+      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/coding-style.md" },
+      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/principles.md" }
     ]
   }
 }
@@ -226,44 +228,24 @@ Save this file as **`{repo-name}.code-workspace`** at the repository root (or on
 
 **What the workspace file does:**
 
-- Mounts `knowledge-base` as a second root so all instruction, agent, and prompt files are accessible by path
-- Agent files are discovered automatically via `chat.agentFilesLocations` pointing to `knowledge-base/agents/` — configured once in VS Code user settings as described in the Developer Environment Setup guide
-- `chat.promptFilesLocations` uses a relative path (`prompts`) which VS Code resolves against each workspace root, finding `knowledge-base/prompts/*.prompt.md`
-- Auto-loads the core instruction files into Copilot's context for code generation, test generation, and code review
+- Registers agents, instructions, and prompts from the knowledge base via relative paths — `..` navigates from the repo up to the shared root, then into the vault
+- Paths work because `obsidian\` is always at the same level as repositories (the structural rule described in the Developer Environment Setup guide)
+- Auto-loads core instruction files into Copilot's context for code generation, test generation, and code review
 
 **Fill in before saving:**
 
 | Placeholder | Replace with |
 |---|---|
 | `{repo-name}` | The repository name (e.g. `my-api`) |
-| `{absolute-path-to-document-hub}` | The full path to the Document Hub confirmed in Phase 2 (e.g. `C:\\obsidian\\work\\Document Hub`) |
-
-> On Windows use double backslashes (`\\`) in the JSON path value. On macOS/Linux use forward slashes.
+| `{your-internal-path}` | The folder path inside your vault leading to `knowledge-base` (e.g. `document-hub`) — confirmed in Phase 2 |
 
 **Known pitfalls — agents not appearing in the VS Code picker:**
 
 | Mistake | Why it fails | Fix |
 |---|---|---|
-| Agent files in `.github/agents/` (not `agents/`) | This knowledge base stores agents in `knowledge-base/agents/` — the `chat.agentFilesLocations` user setting points there. Moving them to `.github/agents/` would break the setting | Keep agents in `knowledge-base/agents/` and ensure the user setting is configured per the Developer Environment Setup guide |
-| `chat.agentFilesLocations` with array format: `["path"]` | The setting uses object format `{ "path": true }`, same as `chat.instructionsFilesLocations` — array is silently ignored | Use object format with the absolute path to `knowledge-base/agents/` |
-| Custom path with relative string in user settings | User settings have no workspace context — relative paths resolve to nothing | Use absolute path to `knowledge-base/agents/` in user settings |
+| Agent files in `.github/agents/` (not `agents/`) | This knowledge base stores agents in `knowledge-base/agents/` — `chat.agentFilesLocations` points there. Moving them to `.github/agents/` breaks discovery | Keep agents in `knowledge-base/agents/` |
+| `chat.agentFilesLocations` with array format: `["path"]` | The setting uses object format `{ "path": true }` — array is silently ignored | Use object format as shown in the template |
 | Opening the repo folder directly | Workspace settings in `.code-workspace` only apply when the workspace file is opened — the folder bypasses them | Open `{repo-name}.code-workspace`, not the folder |
-
----
-
-### Global VS Code Setup (optional — new machine only)
-
-No global setup is required. The workspace file handles file visibility, and the `chat.agentFilesLocations` user setting (configured once per machine as described in the Developer Environment Setup guide) makes agents available everywhere.
-
-If you want agents available even in plain folder sessions (not via `.code-workspace`), add this once to `%APPDATA%\Code\User\settings.json`:
-
-```json
-"chat.agentFilesLocations": {
-  "{absolute-path-to-document-hub}\\knowledge-base\\agents": true
-}
-```
-
-> Use the full absolute path. Relative paths in user settings have no workspace context and resolve to nothing.
 
 ---
 

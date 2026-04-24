@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0f4004f4fa91e6c8",
+        "id": "20a5b80a730ffacd",
         "type": "tabs",
         "children": [
           {
-            "id": "e2b8287d9b886bee",
+            "id": "a900fa8eedd38ec2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "knowledge-base/guides/developer-environment-setup.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "developer-environment-setup"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "knowledge-base/guides/developer-environment-setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de developer-environment-setup"
+              "title": "Enlaces entrantes"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "knowledge-base/guides/developer-environment-setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de developer-environment-setup"
+              "title": "Enlaces salientes"
             }
           },
           {
@@ -156,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "knowledge-base/guides/developer-environment-setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de developer-environment-setup"
+              "title": "Esquema"
             }
           }
         ]
@@ -183,11 +176,19 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "e2b8287d9b886bee",
+  "active": "a900fa8eedd38ec2",
   "lastOpenFiles": [
-    "knowledge-base/test",
+    "knowledge-base/instructions/agent-prompting.md",
+    "knowledge-base/prompts/research.prompt.md",
+    "knowledge-base/prompts/init-codespace.prompt.md",
     "knowledge-base/instructions/init-workflow.md",
+    "knowledge-base/prompts/create-feature.prompt.md",
+    "get-azure-work-item.md",
+    "knowledge-base/prompts/compress-context.prompt.md",
+    "knowledge-base/skills/index.md",
+    "knowledge-base/skills/get-azure-work-item.skill.md",
     "knowledge-base/guides/developer-environment-setup.md",
+    "knowledge-base/test",
     "knowledge-base/guides",
     "knowledge-base/instructions/developer-environment-setup.md",
     "knowledge-base/features",
@@ -195,20 +196,13 @@
     "knowledge-base/agents/staff-engineer.agent.md",
     "knowledge-base/agents/backend-developer.agent.md",
     "knowledge-base/agents/qa-engineer.agent.md",
-    "knowledge-base/skills/index.md",
     "skills/get-azure-work-item.md",
-    "knowledge-base/skills/get-azure-work-item.skill.md",
-    "knowledge-base/prompts/research.prompt.md",
-    "knowledge-base/prompts/init-codespace.prompt.md",
     "knowledge-base/prompts/index.md",
     "knowledge-base/instructions/research-instructions.md",
     "create-feature.md",
     "init-codespace.md",
-    "knowledge-base/prompts/create-feature.prompt.md",
-    "knowledge-base/prompts/compress-context.prompt.md",
     "knowledge-base/instructions/context-compression.md",
     "knowledge-base/instructions/index.md",
-    "knowledge-base/instructions/agent-prompting.md",
     "knowledge-base/instructions/feature-workflow.md",
     "knowledge-base/instructions/git-conventions.md",
     "knowledge-base/instructions/principles.md",
