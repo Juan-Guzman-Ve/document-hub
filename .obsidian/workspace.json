@@ -11,10 +11,14 @@
             "id": "a900fa8eedd38ec2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2.2 - Clasificacion de Gramaticas.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "M2.2 - Clasificacion de Gramaticas"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "knowledge-base/guides/developer-environment-setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de developer-environment-setup"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "knowledge-base/guides/developer-environment-setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes"
+              "title": "Enlaces salientes de developer-environment-setup"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "knowledge-base/guides/developer-environment-setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de developer-environment-setup"
             }
           }
         ]
@@ -178,37 +185,41 @@
   },
   "active": "a900fa8eedd38ec2",
   "lastOpenFiles": [
-    "knowledge-base/instructions/agent-prompting.md",
-    "knowledge-base/prompts/research.prompt.md",
-    "knowledge-base/prompts/init-codespace.prompt.md",
-    "knowledge-base/instructions/init-workflow.md",
-    "knowledge-base/prompts/create-feature.prompt.md",
-    "get-azure-work-item.md",
-    "knowledge-base/prompts/compress-context.prompt.md",
-    "knowledge-base/skills/index.md",
-    "knowledge-base/skills/get-azure-work-item.skill.md",
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2 - Gramaticas y Tipos.md",
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2.2 - Clasificacion de Gramaticas.md",
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2.1 - Arboles Derivacion.md",
     "knowledge-base/guides/developer-environment-setup.md",
-    "knowledge-base/test",
-    "knowledge-base/guides",
-    "knowledge-base/instructions/developer-environment-setup.md",
-    "knowledge-base/features",
-    "knowledge-base/human-guide",
-    "knowledge-base/agents/staff-engineer.agent.md",
-    "knowledge-base/agents/backend-developer.agent.md",
-    "knowledge-base/agents/qa-engineer.agent.md",
-    "skills/get-azure-work-item.md",
-    "knowledge-base/prompts/index.md",
-    "knowledge-base/instructions/research-instructions.md",
-    "create-feature.md",
-    "init-codespace.md",
-    "knowledge-base/instructions/context-compression.md",
-    "knowledge-base/instructions/index.md",
-    "knowledge-base/instructions/feature-workflow.md",
-    "knowledge-base/instructions/git-conventions.md",
-    "knowledge-base/instructions/principles.md",
-    "knowledge-base/instructions/project-structure.md",
-    "knowledge-base/instructions/testing-strategy.md",
-    "skills",
-    "Universidad de palermo/Higiene&Seguridad/1-LegislacionVigente.pdf"
+    "knowledge-base/toexport.7z",
+    "knowledge-base/toexport/agents - copia/qa-engineer.agent.md",
+    "knowledge-base/toexport/agents - copia/staff-engineer.agent.md",
+    "knowledge-base/toexport/agents - copia/software-engineer.agent.md",
+    "knowledge-base/toexport/agents - copia/product-owner.agent.md",
+    "knowledge-base/toexport/agents - copia/index.md",
+    "knowledge-base/toexport/agents - copia/backend-developer.agent.md",
+    "knowledge-base/toexport/agents - copia/frontend-developer.agent.md",
+    "knowledge-base/toexport/agents - copia",
+    "knowledge-base/toexport/instructions - copia/testing-strategy.md",
+    "knowledge-base/toexport/instructions - copia/feature-workflow.md",
+    "knowledge-base/toexport/instructions - copia/research-instructions.md",
+    "knowledge-base/toexport/instructions - copia/project-structure.md",
+    "knowledge-base/toexport/instructions - copia/principles.md",
+    "knowledge-base/toexport/instructions - copia/init-workflow.md",
+    "knowledge-base/toexport/instructions - copia/index.md",
+    "knowledge-base/toexport/instructions - copia/git-conventions.md",
+    "knowledge-base/toexport/instructions - copia/context-compression.md",
+    "knowledge-base/toexport/instructions - copia/design-patterns.md",
+    "knowledge-base/toexport/instructions - copia/coding-style.md",
+    "knowledge-base/toexport/instructions - copia/agent-prompting.md",
+    "knowledge-base/toexport/instructions - copia",
+    "knowledge-base/toexport/skills - copia/get-azure-work-item.skill.md",
+    "knowledge-base/toexport/skills - copia/index.md",
+    "knowledge-base/toexport/skills - copia",
+    "knowledge-base/toexport/index - copia.md",
+    "knowledge-base/toexport/prompts - copia",
+    "knowledge-base/agents - copia",
+    "knowledge-base/instructions - copia",
+    "knowledge-base/skills - copia",
+    "knowledge-base/prompts - copia",
+    "knowledge-base/toexport/guides - copia"
   ]
 }

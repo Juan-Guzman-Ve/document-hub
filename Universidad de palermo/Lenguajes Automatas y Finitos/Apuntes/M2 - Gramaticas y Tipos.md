@@ -33,7 +33,40 @@ S → aSb → aaSbb → aaabbb
 Cada flecha es "aplico una regla". El lenguaje que genera es {aⁿbⁿ / n ≥ 1}.
 
 ---
+## Gramáticas Equivalentes
 
+**Formalmente:** Dos gramáticas G1 y G2 son equivalentes si generan el mismo lenguaje, es decir **L(G1) = L(G2)**.
+
+**En criollo:** No importa que las reglas sean distintas o que los caminos de derivación sean diferentes — si al final el **conjunto de palabras que producen es idéntico**, son equivalentes.
+
+---
+## Ejemplo
+
+**G1** con P = `{ S → aSb | λ }`
+
+**G2** con P = `{ S → aAb | λ, A → aAb | λ }`
+
+Derivaciones de G1:
+
+```
+S → λ
+S → aSb → ab
+S → aSb → aaSbb → aabb
+```
+
+Derivaciones de G2:
+
+```
+S → λ
+S → aAb → aλb → ab
+S → aAb → aaAbb → aaλbb → aabb
+```
+
+**Caminos distintos, mismo resultado** → L(G1) = L(G2) = { aⁿbⁿ / n ≥ 0 }
+
+**→ G1 y G2 son equivalentes ✓**
+
+---
 ## 🏷️ Los 4 Tipos de Gramáticas (Chomsky)
 
 Pensalo como niveles de restricción, del más libre al más estricto:
@@ -98,115 +131,5 @@ Cuando veas una gramática y tengas que clasificarla, seguí esta checklist de a
 
 ---
 
-## 🌳 ¿Qué es un árbol de derivación?
-
-**En criollo:** En vez de escribir la cadena de flechas en línea, lo desplegás como un árbol. La raíz es siempre **S**, las ramas son las producciones que aplicás, y las hojas (lo que está abajo del todo) son los **terminales** — si los juntás de izquierda a derecha, te dan la palabra generada.
-
----
-
-## Ejemplo 1 — Simple
-
-Gramática: P = {S → aSb, S → ab} Palabra a derivar: **aabb**
-
-**Derivación lineal:**
-
-```
-S → aSb → aabb
-```
-
-**Árbol de derivación:**
-
-```
-        S
-       /|\
-      a  S  b
-        / \
-       a   b
-```
-
-Las hojas de izquierda a derecha: **a a b b** ✓
-
----
-
-## Ejemplo 2 — Un nivel más
-
-Misma gramática, palabra: **aaabbb**
-
-**Derivación lineal:**
-
-```
-S → aSb → aaSbb → aaabbb
-```
-
-**Árbol de derivación:**
-
-```
-           S
-          /|\
-         a  S  b
-           /|\
-          a  S  b
-            / \
-           a   b
-```
-
-Hojas: **a a a b b b** ✓
-
-> Notás el patrón: cada vez que aplicás S → aSb, el árbol crece un nivel hacia adentro.
-
----
-
-## Ejemplo 3 — Con dos ramas (más complejo)
-
-Gramática del Ejercicio 3 del TP: P = {S → abAS, S → a, A → b, abA → baab}
-
-Palabra: **a**
-
-```
-    S
-    |
-    a
-```
-
-Simple, S → a directo.
-
----
-
-## Ejemplo 4 — Gramática con bifurcación real
-
-Gramática: P = {S → AB, A → a, B → b} Palabra: **ab**
-
-```
-      S
-     / \
-    A   B
-    |   |
-    a   b
-```
-
-Acá se ve bien la bifurcación: S se parte en dos ramas independientes.
-
----
-
-## 🔑 Reglas para construir el árbol
-
-**1.** La raíz siempre es **S**
-
-**2.** Cada vez que aplicás una producción A → XYZ, dibujás A con tres hijos: X, Y, Z
-
-**3.** Los nodos terminales (minúsculas) son hojas — no tienen hijos
-
-**4.** Leyendo las hojas de **izquierda a derecha** obtenés la palabra generada
-
----
-
-## ¿Cuándo usar árbol vs derivación lineal?
-
-|Situación|Usá|
-|---|---|
-|Gramática simple, una sola rama|Derivación lineal (más rápido)|
-|Gramática con varias producciones aplicadas a la vez|Árbol (más claro)|
-|El ejercicio pide "mostrar la derivación"|Ambas, el árbol refuerza|
-|Gramática ambigua (una palabra tiene dos árboles distintos)|Árbol — es la única forma de verlo|
-
----
+[[M2.1 - Arboles Derivacion | Arboles Derivacion]]
+[[M2.2 - Clasificacion de Gramaticas | Metodo Estructurado Para Clasificacion]]
