@@ -16,7 +16,6 @@ location/
     └── {feature-name}-{backlog-ticket-number}/
         ├── proposal.md          ← written by human before the agent starts
         ├── spec.md
-        ├── clarification.md     ← created if clarification is needed
         ├── plan.md
         ├── tasks.md
         └── implementation.md
@@ -29,10 +28,10 @@ The folder name must match the pattern: `{kebab-case-feature-name}-{BACKLOG_TICK
 ## Phase Overview
 
 ```
-[Branch Check] → Proposal → Spec → [Clarification] → Plan → Tasks → Implementation
-                    ↑          ↑           ↑             ↑       ↑          ↑
-                  human      human       human          human  human       human
-                  writes    approval    approval       approval approval  approval
+[Branch Check] → Proposal → Spec → Plan → Tasks → Implementation
+                    ↑          ↑      ↑       ↑          ↑
+                  human      human  human   human       human
+                  writes    approval approval approval  approval
 ```
 
 Every phase ends with a **human approval gate.** The agent must not proceed to the next phase without explicit approval. If a phase is rejected, the agent revises and resubmits — it does not skip forward.
@@ -109,6 +108,7 @@ Anything you're unsure about that you want the agent to help clarify during the 
 
 **File:** `spec.md`
 **Goal:** Define the **what** and the **why**. No technical decisions yet.
+**Rules:** All spec drafts must follow `spec-writing.md` — acceptance criteria quality, API contract rules, delivery obligations, and the readiness checklist.
 
 The spec captures the feature from a product/behavior perspective:
 - What is the feature about?
@@ -116,7 +116,7 @@ The spec captures the feature from a product/behavior perspective:
 - What is the main happy path?
 - What are the key test scenarios (behavior-level, not implementation-level)?
 
-If the agent has technical questions that would affect the spec, it includes a **Clarification section** at the bottom of `spec.md` before asking for approval. The human answers inline or approves as-is.
+If the agent has technical questions that would affect the spec, it lists them at the bottom of `spec.md`. The human answers them inline and resubmits for approval, or corrects the spec directly. The spec is not approved until all questions are resolved.
 
 ### spec.md Template
 
@@ -124,7 +124,7 @@ If the agent has technical questions that would affect the spec, it includes a *
 # Spec — {Feature Name}
 
 **Ticket:** {BACKLOG_TICKET_NUMBER}
-**Type:** back | front | database | research | testing
+**Type:** back | front | back+front | database | research | testing
 **Status:** Draft | Approved
 
 ---
@@ -142,61 +142,22 @@ No technical details — behavior only.
 
 ## Key Test Scenarios
 Behavior-level scenarios (Given/When/Then). No implementation details.
+Every scenario must be Observable, Testable, Specific, and Traceable (see spec-writing.md).
 
-| # | Scenario | Given | When | Then |
-|---|---|---|---|---|
-| 1 | Happy path | ... | ... | ... |
-| 2 | ... | ... | ... | ... |
+| # | Scenario | Given | When | Then | Type |
+|---|---|---|---|---|---|
+| 1 | Happy path | ... | ... | ... | unit / integration |
+| 2 | ... | ... | ... | ... | unit / integration |
 
 ## Out of Scope
 Anything explicitly excluded from this feature.
-
----
-
-## Clarification Questions *(optional)*
-Questions the agent needs answered before planning can begin.
-
-- [ ] Question 1
-- [ ] Question 2
 ```
 
-**Approval gate:** Human reviews and approves `spec.md`. If clarification questions exist, human answers them (inline in the file or in chat) before approval is given.
+**Approval gate:** Human reviews `spec.md`. If the agent listed open questions, the human answers them inline and the agent revises before resubmitting. Approval is only given when the spec is complete and all questions are resolved.
 
 ---
 
-## Phase 2 — Clarification
-
-**File:** `clarification.md` *(created only if needed)*
-**Goal:** Resolve open technical questions that cannot be answered from the spec alone.
-
-If the clarification section in `spec.md` was sufficient, this file is skipped. The master agent creates `clarification.md` only when the human's answers generate follow-up questions or when a deeper technical discussion is needed before planning.
-
-### clarification.md Template
-
-```markdown
-# Clarification — {Feature Name}
-
-**Ticket:** {BACKLOG_TICKET_NUMBER}
-**Status:** Open | Resolved
-
----
-
-| # | Question | Answer | Status |
-|---|---|---|---|
-| 1 | ... | ... | Open / Resolved |
-| 2 | ... | ... | Open / Resolved |
-
----
-
-## Resolution Summary
-Brief summary of the decisions made as a result of this clarification. This feeds directly into the plan.
-```
-
-**Approval gate:** Human reviews answers and confirms all questions are resolved.
-
----
-
-## Phase 3 — Plan
+## Phase 2 — Plan
 
 **File:** `plan.md`
 **Goal:** Define the **how** — architecture, stack decisions, and design for this feature.
@@ -254,7 +215,7 @@ Known risks or trade-offs in the proposed design.
 
 ---
 
-## Phase 4 — Tasks
+## Phase 3 — Tasks
 
 **File:** `tasks.md`
 **Goal:** Break the approved plan into concrete, actionable tasks with test coverage defined upfront.
@@ -317,7 +278,7 @@ Brief description of what this task implements.
 
 ---
 
-## Phase 5 — Implementation
+## Phase 4 — Implementation
 
 **File:** `implementation.md`
 **Goal:** Execute the approved tasks and produce a final report of what was done.
@@ -380,4 +341,4 @@ Always also check the repo's `copilot-instructions.md` for repo-specific instruc
 
 ---
 
-*Last updated: 2026-04-22*
+*Last updated: 2026-04-24*

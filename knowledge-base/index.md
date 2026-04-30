@@ -68,6 +68,11 @@ Executable slash commands for VS Code Copilot Chat. Type the command directly in
 | `/compress-context`| Compress and save feature context to `context/context-latest.md`            |
 | `/create-feature`  | Start a new feature — create branch, scaffold feature folder and `proposal.md` |
 | `/init-codespace`  | Initialize a repository — scan, confirm stack, generate `copilot-instructions.md` + `.code-workspace` |
+| `/write-spec`      | Draft `spec.md` from the approved `proposal.md`                             |
+| `/write-plan`      | Draft `plan.md` from the approved `spec.md`                                 |
+| `/write-tasks`     | Break the approved `plan.md` into `tasks.md` with test cases                |
+| `/implement`       | Execute approved tasks and produce `implementation.md`                      |
+| `/eod`             | Generate an end-of-day progress summary for the current session             |
 
 ---
 
@@ -100,6 +105,10 @@ Human-facing documentation. These files are not loaded by agents — they are on
 | Setting up a new machine      | [[guides/developer-environment-setup\|Developer Environment Setup]]                                 |
 | Entering a repo with no setup | `/init-codespace` → [[init-workflow\|Init Workflow]]                                                |
 | Starting a new feature        | `/create-feature` → [[feature-workflow\|Feature Workflow]] → [[Document Hub/knowledge-base/agents/index\|Agent Roster]] |
+| Writing the spec              | `/write-spec` → [[feature-workflow\|Feature Workflow]]                                              |
+| Writing the plan              | `/write-plan` → [[feature-workflow\|Feature Workflow]] → [[design-patterns\|Design Patterns]]       |
+| Writing tasks                 | `/write-tasks` → [[feature-workflow\|Feature Workflow]] → [[testing-strategy\|Testing Strategy]]    |
+| Implementing a feature        | `/implement` → [[feature-workflow\|Feature Workflow]]                                               |
 | Writing or reviewing code     | [[coding-style\|Coding Style]] → [[principles\|Principles]]                                         |
 | Designing a solution          | [[design-patterns\|Design Patterns]] → [[principles\|Principles]]                                   |
 | Researching a problem         | `/research` → [[research-instructions\|Research Instructions]]                                      |
@@ -112,4 +121,4 @@ Human-facing documentation. These files are not loaded by agents — they are on
 
 ---
 
-*Last updated: 2026-04-23*
+*Last updated: 2026-04-24*

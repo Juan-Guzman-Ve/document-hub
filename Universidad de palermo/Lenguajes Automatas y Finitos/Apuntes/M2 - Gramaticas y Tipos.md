@@ -9,12 +9,12 @@
 
 Los 4 ingredientes:
 
-| Componente | Qué es | Ejemplo |
-|---|---|---|
-| **Σ_T** | Terminales — las letras "reales" del resultado final | {a, b} |
-| **Σ_N** | No terminales — variables intermedias, "moldes" | {S, A, B} |
-| **S** | Símbolo inicial — de donde arranca todo | S |
-| **P** | Producciones — las reglas de reemplazo | S → aSb |
+| Componente | Qué es                                               | Ejemplo   |
+| ---------- | ---------------------------------------------------- | --------- |
+| **Σ_T**    | Terminales — las letras "reales" del resultado final | {a, b}    |
+| **Σ_N**    | No terminales — variables intermedias, "moldes"      | {S, A, B} |
+| **S**      | Símbolo inicial — de donde arranca todo              | S         |
+| **P**      | Producciones — las reglas de reemplazo               | S → aSb   |
 
 > **Clave:** Los no terminales (mayúsculas) son provisorios. Al final de una derivación, tienen que desaparecer todos y quedar solo terminales (minúsculas).
 

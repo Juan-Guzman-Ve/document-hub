@@ -35,8 +35,9 @@ Each subagent is assigned **one source type** to keep results focused and compos
 | **GitHub**          | Searches repos, issues, PRs, changelogs, or source code                                                                             |
 | **Technical blogs** | Finds relevant articles from recognized engineering blogs                                                                           |
 | **MCP database**    | Queries the repository's configured MCP database connections to inspect schemas, validate assumptions, or trace data flow — **read-only** |
+| **Codebase**        | Explores the current repository to find existing usage patterns, conventions, and implementations — **read-only**                   |
 
-The master agent may spawn one or more subagents depending on the complexity and scope of the task. The MCP database source is only available when connections are defined in the repository's `copilot-instructions.md`.
+The master agent may spawn one or more subagents depending on the complexity and scope of the task. The MCP database source is only available when connections are defined in the repository's `copilot-instructions.md`. The codebase source is only applicable when running inside a repository.
 
 ---
 
@@ -66,6 +67,52 @@ In addition to the standard Findings / Sources / Limitations / Recommendations f
 - **Queries executed** — the exact read queries run, so the master agent can verify them
 - **Schema snapshot** — tables, columns, types, nullability, and key relationships relevant to the question
 - **Data observations** — notable patterns, unexpected values, or constraints discovered
+
+---
+
+## Codebase Exploration
+
+When the research question is implementation-oriented — *"how should I implement X in this repo?"* — the **current repository is the primary context**. Before any external source can give a useful answer, the agent must understand the repo it is working in: its structure, its tech stack, its established patterns, and what already exists.
+
+The codebase subagent does not just look for a specific symbol or file. Its job is to **read the repo as a collaborator would on their first day**: understand the architecture, identify the conventions already in place, and surface any existing implementation of the concept being researched. Only with that context can external findings be translated into something that fits this specific project.
+
+### When to use a codebase subagent
+
+Use a codebase subagent whenever the question has an implementation dimension — i.e., the answer will eventually affect code written in this repo. This includes:
+
+- "How should I implement X here?" — the codebase defines the expected approach
+- "Is there already a pattern for X in this project?" — avoids duplication and enforces consistency
+- "What libraries, utilities, or abstractions does this repo already use for X?" — external research is irrelevant if we already have a solution
+- "How is Y structured across this codebase?" — understanding a layer before adding to it
+
+> When in doubt, always spawn a codebase subagent. It costs nothing and prevents proposing patterns that conflict with what the team already does.
+
+### How to brief a codebase subagent
+
+The subagent must explore the repo systematically, not just search for a keyword. Include in the brief:
+
+1. **Start with `copilot-instructions.md`** — instruct the agent to read this first. It is the repo's map: stack, folder structure, feature conventions, and registered tools. Everything else is explored relative to what this file reveals.
+2. **The specific question** — what concept, pattern, or library to investigate (e.g. "how is Dapper used for data access?")
+3. **The scope** — if the question is layer-specific, narrow the search (e.g. "look in the infrastructure and data access layers"); otherwise explore broadly
+4. **What to return** — a repo overview, relevant file paths, code snippets illustrating the pattern, and a summary of the conventions observed
+
+### Execution flow for the codebase subagent
+
+The subagent must follow this order:
+
+1. Read `copilot-instructions.md` — understand the repo's structure, stack, and conventions
+2. Identify the relevant folders and layers based on the research question
+3. Search and read files to find existing patterns or implementations
+4. Report findings with concrete file references and code examples
+
+### Extended report format for codebase subagents
+
+In addition to the standard Findings / Sources / Limitations / Recommendations format, codebase subagents must include:
+
+- **Repo overview** — a brief summary of the relevant parts of the repo: stack, folder structure, key layers (from `copilot-instructions.md`)
+- **Files explored** — paths searched and specific files read
+- **Code references** — relevant snippets with file path and line range, illustrating the pattern found
+- **Pattern summary** — a concise description of the convention or approach already established in the codebase, which external research must align with
 
 ---
 
@@ -104,7 +151,7 @@ Based solely on findings — no speculation. If confidence is low, state it. If 
 
 After receiving subagent reports, the master agent:
 
-1. **Synthesizes** the findings into a coherent summary
+1. **Synthesizes** the findings into a coherent summary being concise, and if there are comparisons its better to have tables.
 2. **Resolves conflicts** between sources (prefer database > official docs > GitHub > blogs — see Source Priority)
 3. **Identifies gaps** — if a critical question is unanswered, asks the human before proceeding
 4. **Does not proceed** with implementation based on unverified or speculative findings
@@ -117,12 +164,13 @@ After receiving subagent reports, the master agent:
 When sources conflict, use this order:
 
 1. **MCP database connections** — for questions about data structure, schema, or runtime data state, this is the ground truth. Prefer it over all other sources when the question is about what actually exists in the system.
-2. **Official documentation** — authoritative for API behavior, library usage, and technology specifics
-3. **GitHub source / issues / changelogs** — useful for undocumented behavior, bugs, and version-specific details
-4. **Technical blogs** (dev.to, official engineering blogs, well-known authors) — useful for patterns and real-world usage
-5. **Avoid:** undated sources, anonymous posts, AI-generated content presented as fact
+2. **Codebase** — for questions about how something is implemented or should be implemented in this project, the existing code is the ground truth. It reflects the team's established conventions and what is already in production.
+3. **Official documentation** — authoritative for API behavior, library usage, and technology specifics
+4. **GitHub source / issues / changelogs** — useful for undocumented behavior, bugs, and version-specific details
+5. **Technical blogs** (dev.to, official engineering blogs, well-known authors) — useful for patterns and real-world usage
+6. **Avoid:** undated sources, anonymous posts, AI-generated content presented as fact
 
-> Database connections are only applicable to data-shape questions. For technology or API questions, official docs remain the top source.
+> Database connections are only applicable to data-shape questions. Codebase exploration is only applicable to implementation and convention questions. For technology or API questions, official docs remain the top source.
 
 ---
 
@@ -165,4 +213,4 @@ What to do next, or what decision this research supports.
 
 ---
 
-*Last updated: 2026-04-23*
+*Last updated: 2026-04-27*

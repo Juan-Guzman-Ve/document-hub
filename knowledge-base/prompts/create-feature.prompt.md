@@ -10,7 +10,7 @@ inputs:
 You are starting a new feature using the Feature Development Workflow. Load it and the Azure work item skill into your context now:
 
 #file: [[feature-workflow|Feature Workflow]]
-#file:[[get-azure-work-item.skill|Get Azure Work Item Information]]
+#file: [[get-azure-work-item.skill|Get Azure Work Item Information]]
 
 The Azure DevOps backlog item number for this feature is: **AB#${input:azureItemNumber}**
 

@@ -32,13 +32,12 @@ Product Owner
 
 ## Phase → Agent Ownership
 
-| Phase (feature-workflow) | Owner | Participants |
-|---|---|---|
-| Spec | Product Owner | Staff Engineer (review) |
-| Clarification | Staff Engineer | Software Engineer, Product Owner |
-| Plan | Software Engineer | Staff Engineer (approval) |
-| Tasks | Software Engineer | Backend Dev, Frontend Dev, QA Engineer |
-| Implementation | Backend / Frontend Developer | QA Engineer (tests), Staff Engineer (code review) |
+| Phase (feature-workflow) | Owner                        | Participants                                      |
+| ------------------------ | ---------------------------- | ------------------------------------------------- |
+| Spec                     | Product Owner                | Staff Engineer (review)                           |
+| Plan                     | Software Engineer            | Staff Engineer (approval)                         |
+| Tasks                    | Software Engineer            | Backend Dev, Frontend Dev, QA Engineer            |
+| Implementation           | Backend / Frontend Developer | QA Engineer (tests), Staff Engineer (code review) |
 
 ---
 

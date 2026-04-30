@@ -31,6 +31,7 @@ Before spawning any subagents, define the research scope:
 
 1. Break `${input:topic}` into **specific, answerable questions** — no vague asks
 2. Determine which source types are relevant for each question:
+   - **Codebase** — **always include this for implementation questions.** The current repo is the primary context: its stack, conventions, and existing patterns define what a correct answer looks like for this project. The codebase subagent reads `copilot-instructions.md` first to understand the repo, then explores the relevant layers.
    - **Official docs** — for APIs, configuration, language specs, framework behavior
    - **GitHub** — for real-world usage, issues, changelogs, undocumented behavior
    - **Technical blogs** — for patterns, trade-offs, and real-world experience
@@ -58,9 +59,10 @@ Run all subagents **in parallel** — do not wait for one to finish before start
 
 After all subagents return, synthesize their findings following `research-instructions.md`:
 
-1. Resolve conflicts using source priority: Official Docs > GitHub > Blogs
-2. Identify gaps — questions that could not be answered confidently
-3. Produce a **Research Summary** in this format:
+1. Use codebase findings as the **implementation context** — external findings must be interpreted through the lens of what the repo already does. If the codebase already has a pattern, external sources inform refinement, not replacement.
+2. Resolve conflicts using source priority: Codebase > Official Docs > GitHub > Blogs
+3. Identify gaps — questions that could not be answered confidently
+4. Produce a **Research Summary** in this format:
 
 ```
 ## Research Summary — {topic}

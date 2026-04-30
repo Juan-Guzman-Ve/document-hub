@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "20a5b80a730ffacd",
+        "id": "df4c1a7122f36096",
         "type": "tabs",
         "children": [
           {
-            "id": "a900fa8eedd38ec2",
+            "id": "4ab80cc3f7dc06f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2.2 - Clasificacion de Gramaticas.md",
+                "file": "knowledge-base/agents/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "M2.2 - Clasificacion de Gramaticas"
+              "title": "index"
             }
           }
         ]
@@ -183,43 +183,43 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "a900fa8eedd38ec2",
+  "active": "4ab80cc3f7dc06f6",
   "lastOpenFiles": [
-    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2 - Gramaticas y Tipos.md",
+    "knowledge-base/agents/product-owner.agent.md",
+    "knowledge-base/agents/index.md",
+    "knowledge-base/agents/frontend-developer.agent.md",
+    "knowledge-base/agents/backend-developer.agent.md",
     "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2.2 - Clasificacion de Gramaticas.md",
-    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2.1 - Arboles Derivacion.md",
-    "knowledge-base/guides/developer-environment-setup.md",
-    "knowledge-base/toexport.7z",
-    "knowledge-base/toexport/agents - copia/qa-engineer.agent.md",
-    "knowledge-base/toexport/agents - copia/staff-engineer.agent.md",
-    "knowledge-base/toexport/agents - copia/software-engineer.agent.md",
-    "knowledge-base/toexport/agents - copia/product-owner.agent.md",
-    "knowledge-base/toexport/agents - copia/index.md",
-    "knowledge-base/toexport/agents - copia/backend-developer.agent.md",
-    "knowledge-base/toexport/agents - copia/frontend-developer.agent.md",
-    "knowledge-base/toexport/agents - copia",
-    "knowledge-base/toexport/instructions - copia/testing-strategy.md",
-    "knowledge-base/toexport/instructions - copia/feature-workflow.md",
-    "knowledge-base/toexport/instructions - copia/research-instructions.md",
-    "knowledge-base/toexport/instructions - copia/project-structure.md",
-    "knowledge-base/toexport/instructions - copia/principles.md",
-    "knowledge-base/toexport/instructions - copia/init-workflow.md",
-    "knowledge-base/toexport/instructions - copia/index.md",
-    "knowledge-base/toexport/instructions - copia/git-conventions.md",
-    "knowledge-base/toexport/instructions - copia/context-compression.md",
-    "knowledge-base/toexport/instructions - copia/design-patterns.md",
-    "knowledge-base/toexport/instructions - copia/coding-style.md",
-    "knowledge-base/toexport/instructions - copia/agent-prompting.md",
-    "knowledge-base/toexport/instructions - copia",
-    "knowledge-base/toexport/skills - copia/get-azure-work-item.skill.md",
-    "knowledge-base/toexport/skills - copia/index.md",
-    "knowledge-base/toexport/skills - copia",
-    "knowledge-base/toexport/index - copia.md",
-    "knowledge-base/toexport/prompts - copia",
-    "knowledge-base/agents - copia",
-    "knowledge-base/instructions - copia",
-    "knowledge-base/skills - copia",
-    "knowledge-base/prompts - copia",
-    "knowledge-base/toexport/guides - copia"
+    "knowledge-base/prompts/write-tasks.prompt.md",
+    "knowledge-base/prompts/write-spec.prompt.md",
+    "knowledge-base/prompts/write-plan.prompt.md",
+    "knowledge-base/prompts/load-feature.prompt.md",
+    "knowledge-base/prompts/implement.prompt.md",
+    "knowledge-base/prompts/eod.prompt.md",
+    "knowledge-base/instructions/spec-writing.md",
+    "knowledge-base/instructions/load-feature.md",
+    "knowledge-base/instructions/eod-instructions.md",
+    "knowledge-base/Improvements to be made.md",
+    "knowledge-base/bruno/Signals/Users/Get User BY Id.yml",
+    "knowledge-base/bruno/Signals/Users/folder.yml",
+    "knowledge-base/bruno/Signals/opencollection.yml",
+    "knowledge-base/bruno/Signals/environments/Signals - Stage.yml",
+    "knowledge-base/bruno/Signals/environments/Signals - Prod.yml",
+    "knowledge-base/bruno/Signals/environments/Signals - Dev.yml",
+    "knowledge-base/bruno/Signals/Entities/Uptade ADO.yml",
+    "knowledge-base/bruno/Signals/Entities/Templates/folder.yml",
+    "knowledge-base/bruno/Signals/Entities/Templates/entities-templates-eid-fields.yml",
+    "knowledge-base/bruno/Signals/Entities/Search/folder.yml",
+    "knowledge-base/applications/tracker/features/automation-testing-AB#2266524/tasks.md",
+    "knowledge-base/applications/tracker/features/automation-testing-AB#2266524/specs.md",
+    "knowledge-base/applications/tracker/features/automation-testing-AB#2266524/proposal.md",
+    "knowledge-base/applications/tracker/features/automation-testing-AB#2266524/plan.md",
+    "knowledge-base/applications/tracker/features/automation-testing-AB#2266524/Instructions.md",
+    "knowledge-base/applications/tracker/features/automation-testing-AB#2266524/Contexts/2026-04-17_1700-latest.md",
+    "knowledge-base/applications/tracker/features/automation-testing-AB#2266524/Contexts/2026-04-16_1430.md",
+    "knowledge-base/applications/helper-service/General Information.md",
+    "knowledge-base/applications/helper-service/features/watson-study-metrics-AB#2271880/tasks.md",
+    "knowledge-base/applications/helper-service/features/watson-study-metrics-AB#2271880/spec.md",
+    "knowledge-base/applications/helper-service/features/watson-study-metrics-AB#2271880/proposal.md"
   ]
 }

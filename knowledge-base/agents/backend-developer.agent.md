@@ -22,7 +22,7 @@ Executes backend implementation tasks as defined in `tasks.md`. Specializes in s
 
 - Execute backend tasks from the approved `tasks.md` one at a time
 - Follow the architecture and design defined in `plan.md` — no deviations without approval
-- Write clean code according to `coding-style.md` and `principles.md`
+- Write clean code according to  `coding-style.md`and `principles.md`
 - Write unit and integration tests for each task as specified in `tasks.md`
 - Update task status in `tasks.md` as work progresses
 - Stop and report to the Software Engineer if anything is blocked or unclear
@@ -31,15 +31,15 @@ Executes backend implementation tasks as defined in `tasks.md`. Specializes in s
 ## Does NOT Do
 - Make architectural decisions — follows the plan
 - Modify frontend code
-- Change the database schema without a corresponding migration task
+- Perform Any DML or DCL operations on the database
 - Proceed past a blocked task without escalating
 
 ---
 
 ## Owned Phases (feature-workflow)
 
-| Phase | Action |
-|---|---|
+| Phase              | Action                                                     |
+| ------------------ | ---------------------------------------------------------- |
 | **Implementation** | Executes assigned backend tasks; updates `tasks.md` status |
 
 ---

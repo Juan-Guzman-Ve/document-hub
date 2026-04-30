@@ -66,10 +66,29 @@ Defines when and how to compress working context during a feature session. Speci
 
 ---
 
+### [[load-feature|Load Feature]]
+Defines how an agent locates, loads, and summarizes all information for an existing feature when the human wants to resume or inspect it. Covers input resolution (feature name or `AB#` code), folder lookup, document loading, phase detection, and the summary format. This is a read-only operation — no files are modified.
+
+> **Executable form:** use the `/load-feature` prompt in VS Code Copilot Chat to load a feature directly.
+
+---
+
 ### [[feature-workflow|Feature Development Workflow]]
 Spec-Driven Development (SDD) process for implementing new features. Defines sequential phases — each with a file template and a human approval gate. Use this whenever starting work on a new feature.
 
 > **Executable form:** use the `/create-feature` prompt in VS Code Copilot Chat to scaffold a new feature — branch, folder, and `proposal.md` created in one command.
+
+---
+
+### [[spec-writing|Spec Writing]]
+Rules for drafting `spec.md`. Defines the hard behavioral boundary (no technical details), acceptance criteria quality rules (Observable, Testable, Specific, Traceable), test coverage expectations (unit / integration), and the readiness checklist the agent must pass before presenting any draft. Use this during Phase 1 of the Feature Development Workflow.
+
+---
+
+### [[eod-instructions|EOD Summary Instructions]]
+Rules for producing an end-of-day progress summary. Defines format (`[eod]` tag + plain text bullet list), tone rules (no marketing, no outcome justification), and what to include or exclude. Output is plain text for direct paste into Azure DevOps discussions.
+
+> **Executable form:** use the `/eod` prompt in VS Code Copilot Chat to generate a summary directly.
 
 ---
 
@@ -78,6 +97,7 @@ Spec-Driven Development (SDD) process for implementing new features. Defines seq
 | Task                                            | Files to consult                                |
 | ----------------------------------------------- | ----------------------------------------------- |
 | Entering a repo with no copilot-instructions.md | `/init-codespace` prompt, init-workflow         |
+| Resuming or inspecting an existing feature      | `/load-feature` prompt, load-feature            |
 | Designing a feature or architecture             | design-patterns, principles                     |
 | Writing or reviewing code                       | coding-style, principles                        |
 | `/research`        | Research a technical topic before planning or implementation        |
@@ -87,4 +107,6 @@ Spec-Driven Development (SDD) process for implementing new features. Defines seq
 | Prompting or briefing an agent                  | agent-prompting, research-instructions          |
 | Starting a new project                          | project-structure, principles                   |
 | Compressing feature context             | `/compress-context` prompt, context-compression              |
+| Writing a spec                                  | `/write-spec` prompt, spec-writing, feature-workflow        |
 | Implementing a new feature              | `/create-feature` prompt, feature-workflow, design-patterns, coding-style |
+| Writing an EOD summary                          | `/eod` prompt, eod-instructions                             |
