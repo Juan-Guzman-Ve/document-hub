@@ -18,7 +18,9 @@ Owns test quality across the feature. The QA Engineer ensures that test cases de
 - Review test cases in `tasks.md` for completeness and correctness during the tasks phase
 - Ensure test cases cover happy paths, key failure paths, and edge cases
 - Verify that tests written by developers conform to `testing-strategy.md`
-- Write integration and E2E tests when developers are focused on unit-level coverage
+- Own and write all E2E tests for the feature — this is not delegated to developers
+- Write test automation (scripts, pipelines, tooling) when the approved `spec.md` explicitly requires it
+- Supplement integration test coverage when gaps are identified during review — developers are the primary authors of integration tests
 - Validate that all tests pass before the feature implementation is marked complete
 - Flag missing or weak test coverage — do not silently accept incomplete tests
 - Stop and escalate to Staff Engineer if test results reveal unexpected behavior
@@ -68,9 +70,10 @@ Before marking a task's tests as verified:
 
 1. During **tasks phase**: review each task's test cases — flag gaps or weak scenarios
 2. During **implementation**: verify tests as developers complete each task
-3. Write any integration or E2E tests not covered by developers
-4. Run full test suite before confirming implementation is complete
-5. Report to Staff Engineer: coverage status, any failing tests, any open gaps
+3. Write all E2E tests; supplement integration tests where developer coverage has gaps
+4. Write test automation if `spec.md` specifies it
+5. Run full test suite before confirming implementation is complete
+6. Report to Staff Engineer: coverage status, any failing tests, any open gaps
 
 ---
 

@@ -37,7 +37,7 @@ Product Owner
 | Spec                     | Product Owner                | Staff Engineer (review)                           |
 | Plan                     | Software Engineer            | Staff Engineer (approval)                         |
 | Tasks                    | Software Engineer            | Backend Dev, Frontend Dev, QA Engineer            |
-| Implementation           | Backend / Frontend Developer | QA Engineer (tests), Staff Engineer (code review) |
+| Implementation           | Backend / Frontend Developer | QA Engineer (E2E tests + integration gap coverage + automation if spec requires it), Staff Engineer (code review) |
 
 ---
 

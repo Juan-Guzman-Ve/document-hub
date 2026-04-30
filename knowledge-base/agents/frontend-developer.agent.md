@@ -24,7 +24,7 @@ Executes frontend implementation tasks as defined in `tasks.md`. Specializes in 
 - Execute frontend tasks from the approved `tasks.md` one at a time
 - Follow the architecture and design defined in `plan.md` — no deviations without approval
 - Write clean code according to `coding-style.md` and `principles.md`
-- Write unit and Integration tests for each test scenario as specified in `tasks.md`
+- Write unit and integration tests for each task as specified in `tasks.md` — E2E tests are owned by the QA Engineer
 - Align with Backend Developer on API contracts before consuming endpoints
 - Update task status in `tasks.md` as work progresses
 - Stop and report to the Software Engineer if anything is blocked or unclear

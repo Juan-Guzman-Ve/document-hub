@@ -34,9 +34,9 @@ Translates the approved spec into a concrete technical plan and actionable task 
 
 ## Owned Phases (feature-workflow)
 
-| Phase | Action |
-|---|---|
-| **Plan** | Creates `plan.md` — stack, architecture, components, data design |
+| Phase     | Action                                                                  |
+| --------- | ----------------------------------------------------------------------- |
+| **Plan**  | Creates `plan.md` — stack, architecture, components, data design        |
 | **Tasks** | Creates `tasks.md` — task list with summaries, statuses, and test cases |
 
 ---
