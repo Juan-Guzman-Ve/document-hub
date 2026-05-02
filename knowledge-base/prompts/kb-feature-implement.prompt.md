@@ -1,6 +1,13 @@
 ---
 mode: 'agent'
 description: 'Phase 4 — Execute approved tasks and produce implementation.md'
+documentType: 'prompt'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
 ---
 
 You are executing **Phase 4 — Implementation** of the Feature Development Workflow. Load the workflow definition and all implementation instruction files into your context now:
@@ -29,7 +36,7 @@ If no matching folder is found, stop and tell the human — the feature folder h
 
 ## Step 2 — Read the approved inputs
 
-- `tasks.md` — required. If it does not exist or has `Status: Draft`, stop and tell the human that Phase 3 must be completed first using `/write-tasks`.
+- `tasks.md` — required. If it does not exist or has `Status: Draft`, stop and tell the human that Phase 3 must be completed first using `/kb-feature-tasks`.
 - `plan.md` — required for architectural context. Read fully before starting any task.
 - `spec.md` — read for behavioral context and test scenario reference.
 
@@ -85,7 +92,7 @@ Present the full draft to the human before writing anything to disk.
 - If the human has corrections → revise and re-present
 - If approved → write `implementation.md` to:
   ```
-  {feature-folder-path}/{feature-name}-{ticket}/implementation.md
+  {feature-folder-path}/{feature-name}-{ticket}/kb-feature-implementation.md
   ```
   Confirm the file was saved and show the full path.
 

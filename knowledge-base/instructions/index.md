@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Instructions Index
 
 > This document is the entry point for all agent instructions. Use it to locate the right reference file for a given task. Each linked document contains its own detailed summary and rules.
@@ -55,28 +64,28 @@ How the master agent must brief and delegate tasks to subagents. Defines the tas
 ### [[init-workflow|Repository Init Workflow]]
 How to initialize a repository's `copilot-instructions.md` when one does not exist or does not reference the knowledge base. Defines a 4-phase process: Discover, Confirm, Generate, Validate — ending with human approval. Use this as the **first step** when entering any unconfigured repository.
 
-> **Executable form:** use the `/init-codespace` prompt in VS Code Copilot Chat to run this workflow directly — no manual briefing required.
+> **Executable form:** use the `/kb-bootstrap-repo` prompt in VS Code Copilot Chat to run this workflow directly — no manual briefing required.
 
 ---
 
 ### [[context-compression|Context Compression]]
-Defines when and how to compress working context during a feature session. Specifies the `context/` folder structure inside the feature folder, the versioning strategy (`context-latest.md` + timestamped snapshots), and the snapshot template an agent must fill. Also defines how a resuming agent reads and restores context.
+Defines when and how to compress working context during a feature session. Specifies the `context/` folder structure inside the feature folder, the versioning strategy (`latest.md` + timestamped snapshots), and the snapshot template an agent must fill. Also defines how a resuming agent reads and restores context.
 
-> **Executable form:** use the `/compress-context` prompt in VS Code Copilot Chat to run compression directly.
+> **Executable form:** use the `/kb-feature-context-save` prompt in VS Code Copilot Chat to run compression directly.
 
 ---
 
 ### [[load-feature|Load Feature]]
 Defines how an agent locates, loads, and summarizes all information for an existing feature when the human wants to resume or inspect it. Covers input resolution (feature name or `AB#` code), folder lookup, document loading, phase detection, and the summary format. This is a read-only operation — no files are modified.
 
-> **Executable form:** use the `/load-feature` prompt in VS Code Copilot Chat to load a feature directly.
+> **Executable form:** use the `/kb-feature-load` prompt in VS Code Copilot Chat to load a feature directly.
 
 ---
 
 ### [[feature-workflow|Feature Development Workflow]]
 Spec-Driven Development (SDD) process for implementing new features. Defines sequential phases — each with a file template and a human approval gate. Use this whenever starting work on a new feature.
 
-> **Executable form:** use the `/create-feature` prompt in VS Code Copilot Chat to scaffold a new feature — branch, folder, and `proposal.md` created in one command.
+> **Executable form:** use the `/kb-feature-start` prompt in VS Code Copilot Chat to scaffold a new feature — branch, folder, and `proposal.md` created in one command.
 
 ---
 
@@ -88,7 +97,12 @@ Rules for drafting `spec.md`. Defines the hard behavioral boundary (no technical
 ### [[eod-instructions|EOD Summary Instructions]]
 Rules for producing an end-of-day progress summary. Defines format (`[eod]` tag + plain text bullet list), tone rules (no marketing, no outcome justification), and what to include or exclude. Output is plain text for direct paste into Azure DevOps discussions.
 
-> **Executable form:** use the `/eod` prompt in VS Code Copilot Chat to generate a summary directly.
+> **Executable form:** use the `/kb-eod` prompt in VS Code Copilot Chat to generate a summary directly.
+
+---
+
+### [[document-governance|Document Governance]]
+Rules for keeping the knowledge base consistent and searchable. Defines authority order, metadata requirements, prompt-vs-instruction duplication policy, link style, and change-log footer convention.
 
 ---
 
@@ -96,17 +110,22 @@ Rules for producing an end-of-day progress summary. Defines format (`[eod]` tag 
 
 | Task                                            | Files to consult                                |
 | ----------------------------------------------- | ----------------------------------------------- |
-| Entering a repo with no copilot-instructions.md | `/init-codespace` prompt, init-workflow         |
-| Resuming or inspecting an existing feature      | `/load-feature` prompt, load-feature            |
+| Entering a repo with no copilot-instructions.md | `/kb-bootstrap-repo` prompt, init-workflow         |
+| Resuming or inspecting an existing feature      | `/kb-feature-load` prompt, load-feature            |
 | Designing a feature or architecture             | design-patterns, principles                     |
 | Writing or reviewing code                       | coding-style, principles                        |
-| `/research`        | Research a technical topic before planning or implementation        |
 | Researching a technology or problem             | research-instructions                           |
 | Creating branches or commits                    | git-conventions                                 |
 | Writing tests                                   | testing-strategy, coding-style                  |
 | Prompting or briefing an agent                  | agent-prompting, research-instructions          |
 | Starting a new project                          | project-structure, principles                   |
-| Compressing feature context             | `/compress-context` prompt, context-compression              |
-| Writing a spec                                  | `/write-spec` prompt, spec-writing, feature-workflow        |
-| Implementing a new feature              | `/create-feature` prompt, feature-workflow, design-patterns, coding-style |
-| Writing an EOD summary                          | `/eod` prompt, eod-instructions                             |
+| Compressing feature context             | `/kb-feature-context-save` prompt, context-compression              |
+| Writing a spec                                  | `/kb-feature-spec` prompt, spec-writing, feature-workflow        |
+| Implementing a new feature              | `/kb-feature-start` prompt, feature-workflow, design-patterns, coding-style |
+| Writing an EOD summary                          | `/kb-eod` prompt, eod-instructions                             |
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 
 # Feature Development Workflow
 
@@ -8,7 +17,7 @@
 
 ## Folder Structure
 
-Every feature folder `features/` folder will be defined on the copilo-instructions.md of each repo . The master agent must create the feature folder before starting the spec:
+The feature folder location is defined in each repository's `copilot-instructions.md`. The master agent must create the feature folder before starting the spec:
 
 ```
 location/
@@ -69,7 +78,9 @@ git checkout -b AB#{AZURE_ITEM_NUMBER}
 **File:** `proposal.md`
 **Goal:** Capture the human's initial idea for what is going to be built — rough, unrefined, and written before the agent does any work.
 
-This is a **human-authored** document. The agent does not generate it. The proposal is an informal draft that gives enough context for the agent to start the Spec phase. It does not need to be complete or technically precise — its purpose is to communicate intent.
+This is a **human-owned** document. The agent may assist by pre-filling a draft from reliable sources (for example, an Azure work item), but the human must confirm and approve the proposal content before Phase 1 begins.
+
+The proposal is an informal draft that gives enough context for the agent to start the Spec phase. It does not need to be complete or technically precise — its purpose is to communicate intent.
 
 The proposal should answer, at a minimum:
 - What is the rough idea or feature request?
@@ -100,7 +111,7 @@ Anything the implementation must or must not do, based on what you already know.
 Anything you're unsure about that you want the agent to help clarify during the Spec phase.
 ```
 
-**Approval gate:** The human submits `proposal.md` to start the workflow. The agent reads it and uses it as the primary input for drafting `spec.md`. No agent approval is needed on the proposal itself — it is the starting point, not a deliverable.
+**Approval gate:** The human confirms `proposal.md` is ready to use. The agent reads it and uses it as the primary input for drafting `spec.md`. The agent must not start Phase 1 until this human confirmation is explicit.
 
 ---
 
@@ -108,7 +119,7 @@ Anything you're unsure about that you want the agent to help clarify during the 
 
 **File:** `spec.md`
 **Goal:** Define the **what** and the **why**. No technical decisions yet.
-**Rules:** All spec drafts must follow `spec-writing.md` — acceptance criteria quality, API contract rules, delivery obligations, and the readiness checklist.
+**Rules:** All spec drafts must follow `spec-writing.md` — acceptance criteria quality and the readiness checklist.
 
 The spec captures the feature from a product/behavior perspective:
 - What is the feature about?
@@ -342,3 +353,9 @@ Always also check the repo's `copilot-instructions.md` for repo-specific instruc
 ---
 
 *Last updated: 2026-04-24*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

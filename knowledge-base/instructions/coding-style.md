@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Coding Style
 
 > **Purpose:** Rules for writing clean, readable, and maintainable code.
@@ -360,3 +369,9 @@ function findById<T extends { id: string }>(list: T[], id: string): T | undefine
 ---
 
 *Last updated: 2026-04-28*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

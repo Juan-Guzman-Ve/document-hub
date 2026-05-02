@@ -1,6 +1,13 @@
 ---
 mode: 'agent'
 description: 'Phase 1 — Draft spec.md from the approved proposal'
+documentType: 'prompt'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
 ---
 
 You are executing **Phase 1 — Spec** of the Feature Development Workflow. Load the workflow definition and spec writing rules into your context now:
@@ -18,7 +25,7 @@ Follow each step below in order. Do not write any file before receiving explicit
 2. Check the current git branch: `git branch --show-current`
 3. Find the feature folder matching the current branch name under the feature folder path
 
-If no matching folder is found, stop and tell the human — the feature folder has not been created yet. Run `/create-feature` first.
+If no matching folder is found, stop and tell the human — the feature folder has not been created yet. Run `/kb-feature-start` first.
 
 ---
 
@@ -56,7 +63,7 @@ Before presenting the draft, run every item in the readiness checklist from `spe
 
 ## Step 5 — Present and revise
 
-Present the full draft to the human. Include a brief summary of which checklist items were addressed (e.g. "API contract defined, DB migration noted, all scenarios have a test type assigned").
+Present the full draft to the human. Include a brief summary of which checklist items were addressed (e.g. "no technical details included, all scenarios are observable/testable/specific/traceable, all scenarios have a test type assigned").
 
 - If the human has corrections or unanswered questions → revise and re-present. Do not write until fully approved.
 - If approved → set `Status: Approved`, write the file to:
@@ -72,6 +79,6 @@ Present the full draft to the human. Include a brief summary of which checklist 
 Tell the human:
 
 1. `spec.md` is saved and approved
-2. The next step is Phase 2 (Plan) — they can use `/write-plan` when ready
+2. The next step is Phase 2 (Plan) — they can use `/kb-feature-plan` when ready
 
 > Do not proceed to the Plan phase. The human decides when to move forward.

@@ -1,3 +1,12 @@
+---
+documentType: 'skill'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Skills Index
 
 > This document is the entry point for all skills. Skills are scoped instruction files that define step-by-step execution guides for specific recurring tasks. Any agent can invoke a skill when the triggering condition is met.
@@ -7,6 +16,12 @@
 ## How to Use
 
 Skills are not slash commands — they are reference files agents load when a matching task arises. An agent identifies the relevant skill from this index and follows its execution flow exactly.
+
+Source of truth:
+
+- Files in `knowledge-base/skills/` are canonical.
+- Files in `knowledge-base/exports/` are generated mirrors for export workflows.
+- Do not manually edit exported copies; run `tools/sync-skills.ps1`.
 
 ---
 
@@ -21,12 +36,22 @@ Retrieves a work item from the Azure DevOps backlog and presents it in a consist
 
 ---
 
+### [[new-feature-branch.skill|New Feature Branch]]
+
+Creates a new feature branch from an up-to-date `main` using `tools/new-feature-branch.ps1`. Confirms the branch name with the user, runs the script, and handles common error cases (uncommitted changes, pull failures, duplicate branches).
+
+**Triggered by:** Any request to start a new feature or create a branch from `main`.
+**Tools used:** `tools/new-feature-branch.ps1` (PowerShell)
+
+---
+
 ## Quick Reference
 
 | Skill | Triggered by |
 | --- | --- |
 | Get Azure Work Item | User provides a work item ID (`AB#...`) or title/keyword |
+| New Feature Branch | User wants to start a feature or create a branch from `main` |
 
 ---
 
-*Last updated: 2026-04-23*
+*Last updated: 2026-05-01*

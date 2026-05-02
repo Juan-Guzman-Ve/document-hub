@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # EOD Summary Instructions
 
 > **Purpose:** Define how to produce an end-of-day progress summary when asked.
@@ -59,3 +68,9 @@ Do not include:
 ---
 
 *Last updated: 2026-04-24*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

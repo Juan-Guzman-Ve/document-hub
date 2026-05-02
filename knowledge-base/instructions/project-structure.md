@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Project Structure
 
 > **Purpose:** Define how agents must discover and respect the structure of any repository, and establish the role of each repo's `copilot-instructions.md` as its knowledge base entry point.
@@ -90,3 +99,9 @@ These apply when starting a **greenfield project** or when the repo's `copilot-i
 ---
 
 *Last updated: 2026-04-22*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

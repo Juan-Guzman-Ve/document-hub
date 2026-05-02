@@ -1,6 +1,13 @@
 ---
 mode: 'agent'
 description: 'Phase 2 — Draft plan.md from the approved spec'
+documentType: 'prompt'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
 ---
 
 You are executing **Phase 2 — Plan** of the Feature Development Workflow. Load the workflow definition and relevant instruction files into your context now:
@@ -29,7 +36,7 @@ If no matching folder is found, stop and tell the human — the feature folder h
 
 Open `spec.md` inside the feature folder and read it fully.
 
-- If `spec.md` does not exist → stop. Phase 1 must be completed first using `/write-spec`.
+- If `spec.md` does not exist → stop. Phase 1 must be completed first using `/kb-feature-spec`.
 - If `spec.md` has `Status: Draft` → stop. The spec must be approved before planning begins.
 
 ---
@@ -67,6 +74,6 @@ Present the full draft to the human before writing anything to disk.
 Tell the human:
 
 1. `plan.md` is saved and approved
-2. The next step is Phase 3 (Tasks) — they can use `/write-tasks` when ready
+2. The next step is Phase 3 (Tasks) — they can use `/kb-feature-tasks` when ready
 
 > Do not proceed to task breakdown. The human decides when to move forward.

@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Git Conventions
 
 > **Purpose:** Define how version control is used — branching, commits, and pull requests — to keep history clean and collaboration predictable.
@@ -137,3 +146,9 @@ How this was verified (manual test, unit test, etc.)
 ---
 
 *Last updated: 2026-04-22*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

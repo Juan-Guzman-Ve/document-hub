@@ -1,3 +1,12 @@
+---
+documentType: 'agent'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Agent — Product Owner
 
 ## Role
@@ -30,10 +39,9 @@ Human / Engineer
 
 ## Owned Phases (feature-workflow)
 
-| Phase | Action |
-|---|---|
-| **Spec** | Creates `spec.md` — the what, why, happy path, and test scenarios |
-| **Clarification** | Answers business/requirement questions; escalates technical questions to Staff Engineer |
+| Phase             | Action                                                                                  |
+| ----------------- | --------------------------------------------------------------------------------------- |
+| **Spec**          | Creates `spec.md` — the what, why, happy path, and test scenarios                       |
 
 ---
 
@@ -55,4 +63,10 @@ features/{feature-name}-{TICKET}/spec.md
 
 ---
 
-*Last updated: 2026-04-21*
+*Last updated: 2026-05-01*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

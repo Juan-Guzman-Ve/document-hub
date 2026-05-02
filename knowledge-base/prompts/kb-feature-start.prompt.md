@@ -5,12 +5,20 @@ inputs:
   - id: azureItemNumber
     description: 'Azure DevOps backlog item number (e.g. 1234)'
     type: promptString
+documentType: 'prompt'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
 ---
 
-You are starting a new feature using the Feature Development Workflow. Load it and the Azure work item skill into your context now:
+You are starting a new feature using the Feature Development Workflow. Load it and the required skills into your context now:
 
 #file: [[feature-workflow|Feature Workflow]]
 #file: [[get-azure-work-item.skill|Get Azure Work Item Information]]
+#file: [[new-feature-branch.skill|New Feature Branch]]
 
 The Azure DevOps backlog item number for this feature is: **AB#${input:azureItemNumber}**
 
@@ -33,22 +41,18 @@ If the item is not found, stop and report the error — do not proceed without c
 Open `copilot-instructions.md` at the repository root and locate the **Feature Folder** section.
 Extract the exact path where feature folders must be created (e.g. `src/Features/`, `app/Features/`).
 
-If `copilot-instructions.md` is missing or has no Feature Folder section, stop and tell the human — the repo must be initialized first using `/init-codespace`.
+If `copilot-instructions.md` is missing or has no Feature Folder section, stop and tell the human — the repo must be initialized first using `/kb-bootstrap-repo`.
 
 ---
 
-## Step 3 — Branch check
+## Step 3 — Create the branch
 
 Run `git branch --show-current` to check the current branch.
 
 - **If already on `AB#${input:azureItemNumber}`** → proceed to Step 4
-- **If on any other branch** → run:
-  ```bash
-  git checkout main
-  git pull
-  git checkout -b AB#${input:azureItemNumber}
-  ```
-  Confirm the branch was created and is active before proceeding.
+- **If on any other branch** → use the `new-feature-branch` skill to create the branch.
+
+Follow the skill's execution flow exactly — confirm the branch name with the human before running the script, then verify the branch is active before proceeding.
 
 ---
 
@@ -87,7 +91,18 @@ Inside it, create `proposal.md` using the template from `feature-workflow.md` Ph
 
 ---
 
-## Step 6 — Hand off to the human
+## Step 6 — Human confirmation gate for Proposal
+
+Show the generated `proposal.md` to the human and ask for explicit confirmation:
+
+**"Please review `proposal.md`. Should I treat this proposal as approved and ready for Phase 1 (Spec)?"**
+
+- If the human requests changes, update `proposal.md` and ask again.
+- Do not start Phase 1 until the human explicitly confirms the proposal is ready.
+
+---
+
+## Step 7 — Hand off to the human
 
 Tell the human:
 

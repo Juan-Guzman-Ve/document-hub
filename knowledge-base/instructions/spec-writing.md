@@ -1,7 +1,16 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Spec Writing
 
 > **Purpose:** Define the rules the agent must apply when drafting `spec.md`. The spec is a **behavioral document** — it defines what the feature does and why it exists. Technical decisions, implementation details, API contracts, and delivery concerns belong in the plan, not the spec.
-> **Used by:** `/write-spec` prompt, Phase 1 of the Feature Development Workflow.
+> **Used by:** `/kb-feature-spec` prompt, Phase 1 of the Feature Development Workflow.
 
 ---
 
@@ -80,3 +89,9 @@ Before presenting any draft to the human, the agent must run this checklist inte
 
 *Last updated: 2026-04-24*
 
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

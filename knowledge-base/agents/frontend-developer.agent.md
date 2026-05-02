@@ -1,3 +1,12 @@
+---
+documentType: 'agent'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Agent — Frontend Developer
 
 ## Role
@@ -24,7 +33,7 @@ Executes frontend implementation tasks as defined in `tasks.md`. Specializes in 
 - Execute frontend tasks from the approved `tasks.md` one at a time
 - Follow the architecture and design defined in `plan.md` — no deviations without approval
 - Write clean code according to `coding-style.md` and `principles.md`
-- Write unit and integration tests for each task as specified in `tasks.md` — E2E tests are owned by the QA Engineer
+- Write unit and integration tests for changed frontend behavior as specified in `tasks.md`
 - Align with Backend Developer on API contracts before consuming endpoints
 - Update task status in `tasks.md` as work progresses
 - Stop and report to the Software Engineer if anything is blocked or unclear
@@ -52,7 +61,7 @@ Executes frontend implementation tasks as defined in `tasks.md`. Specializes in 
 |---|---|
 | [[coding-style]] | Every line of code written must conform to these rules |
 | [[principles]] | Guards DRY, YAGNI, SOLID in every implementation decision |
-| [[testing-strategy]] | Defines how to write unit and E2E tests |
+| [[testing-strategy]] | Defines how to write unit and integration tests |
 | [[git-conventions]] | Branch naming, commits, and PR rules for every change |
 
 ---
@@ -69,4 +78,10 @@ Executes frontend implementation tasks as defined in `tasks.md`. Specializes in 
 
 ---
 
-*Last updated: 2026-04-21*
+*Last updated: 2026-05-01*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

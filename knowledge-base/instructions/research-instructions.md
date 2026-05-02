@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Research Instructions
 
 > **Purpose:** Define how the master agent must conduct technical research using subagents, keeping the main context window clean and focused.
@@ -214,3 +223,9 @@ What to do next, or what decision this research supports.
 ---
 
 *Last updated: 2026-04-27*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

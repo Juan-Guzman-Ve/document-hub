@@ -1,3 +1,12 @@
+---
+documentType: 'skill'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Skill — Get Azure Work Item
 
 > **Purpose:** Retrieve a work item from the Azure DevOps backlog and present it in a consistent, readable format.

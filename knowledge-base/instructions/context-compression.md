@@ -1,3 +1,12 @@
+---
+documentType: 'note'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Context Compression
 
 > **Purpose:** Define how an agent must compress and persist its working context during a feature session. Compressed context enables short, focused context windows and allows any future agent to resume work on a feature without re-reading the full conversation history.
@@ -9,7 +18,7 @@
 
 Compress context when **any** of the following occurs:
 
-- The human explicitly requests a context compression (e.g. "compress context", "save context", `/compress-context`)
+- The human explicitly requests a context compression (e.g. "compress context", "save context", `/kb-feature-context-save`)
 - The agent detects the context window is becoming large and unwieldy
 - The human is about to pause work on the feature and may resume in a future session
 - A phase boundary is reached (e.g. Spec approved → moving to Plan)
@@ -29,9 +38,9 @@ Context files live inside the active feature folder, under a `context/` subfolde
     ├── tasks.md
     ├── implementation.md
     └── context/
-        ├── context-latest.md       ← always the most recent snapshot
-        ├── context-2026-04-23-1430.md  ← previous snapshots (renamed on each compress)
-        └── context-2026-04-23-1200.md
+        ├── latest.md            ← always the most recent snapshot
+        ├── 2026-04-23-1430.md  ← previous snapshots (renamed on each compress)
+        └── 2026-04-23-1200.md
 ```
 
 The feature folder path is defined in the repo's `copilot-instructions.md` under the **Feature Folder** section.
@@ -42,15 +51,15 @@ The feature folder path is defined in the repo's `copilot-instructions.md` under
 
 Each time compression runs:
 
-1. If `context-latest.md` **already exists** → rename it to `context-{YYYY-MM-DD-HHmm}.md` (use the current timestamp)
-2. Create a new `context-latest.md` with the current snapshot
+1. If `latest.md` **already exists** → rename it to `{YYYY-MM-DD-HHmm}.md` (use the current timestamp)
+2. Create a new `latest.md` with the current snapshot
 3. Never delete old snapshots — they serve as an audit trail
 
-When resuming a feature, always read `context-latest.md`. Only read older snapshots if instructed by the human or if `context-latest.md` is missing.
+When resuming a feature, always read `latest.md`. Only read older snapshots if instructed by the human or if `latest.md` is missing.
 
 ---
 
-## What to Include in `context-latest.md`
+## What to Include in `latest.md`
 
 The compressed context must be dense but complete — a future agent reading only this file must be able to resume work without any other conversation history.
 
@@ -128,8 +137,16 @@ Any unresolved questions or blockers that must be addressed before proceeding.
 - **Never summarize decisions vaguely** — if a pattern was chosen, name it; if a path was agreed, write the path
 - **Never omit files created or modified** — the file list must be accurate enough to reconstruct what changed
 - **Always resolve the feature folder path from `copilot-instructions.md`** before writing — never hardcode a path
-- **Never overwrite `context-latest.md` without first renaming the existing one** — history must be preserved
+- **Never overwrite `latest.md` without first renaming the existing one** — history must be preserved
 - **The snapshot must be self-contained** — assume the next agent has zero conversation history
+
+---
+
+## Single Source of Truth
+
+The canonical snapshot filename is `latest.md`.
+
+- The `context/` folder name already identifies the file purpose.
 
 ---
 
@@ -137,7 +154,7 @@ Any unresolved questions or blockers that must be addressed before proceeding.
 
 When a new session starts on a feature that has a `context/` folder:
 
-1. Read `context-latest.md` before any other action
+1. Read `latest.md` before any other action
 2. Present a brief resume summary to the human:
    - Active phase
    - Current state
@@ -157,3 +174,9 @@ When a new session starts on a feature that has a `context/` folder:
 ---
 
 *Last updated: 2026-04-23*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

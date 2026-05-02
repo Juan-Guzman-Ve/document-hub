@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Software Principles
 
 > **Purpose:** Core principles that guide every design and implementation decision.
@@ -99,3 +108,9 @@ When principles conflict, use this order as a guide:
 ---
 
 *Last updated: 2026-04-20*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

@@ -1,3 +1,12 @@
+---
+documentType: 'guide'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Developer Environment Setup
 
 > **Audience:** Human developers — not agents. Complete this once before working with this knowledge base.
@@ -6,36 +15,37 @@
 
 ## Overview
 
-The agents and tooling in this system rely on one structural rule: the `obsidian\` vault must sit **at the same level as your repositories**. The internal path within the vault can vary per developer or team.
+The agents and tooling in this system rely on one structural rule: the knowledge-base must be reachable from a folder that sits **at the same level as your repositories**. The internal path can vary per developer or team.
+
+Canonical layout:
+
+- Your repositories and the knowledge-base root share the same parent directory.
+- Whether your vault is `knowledge-base/` directly or `obsidian/{vault}/knowledge-base/`, the key invariant is sibling placement with repositories.
 
 ---
 
 ## Step 1 — Establish the Root Folder Convention
 
-Create a single root folder that holds both your repositories and the Obsidian vault. The drive letter and root folder name are up to you — the invariant is that **`obsidian\` is a sibling of your repos**.
+Create a single root folder that holds both your repositories and the knowledge-base source. The drive letter and root folder name are up to you — the invariant is sibling placement.
 
 ```
 {your-root}\                     ← e.g. C:\git, D:\dev, P:\github
-  ├── obsidian\                  ← Obsidian vault root — must be at this level
-  │   └── {your-internal-path}\ ← varies per developer, e.g. document-hub\ or work\Document Hub\
-  │       └── knowledge-base\   ← agents, instructions, prompts, skills
+  ├── knowledge-base\            ← agents, instructions, prompts, skills
   ├── repo-a\
   ├── repo-b\
   └── repo-c\
 ```
 
-**Example** for a developer whose root is `P:\github` and vault path is `obsidian\document-hub`:
+**Alternative example** when using a vault path:
 
 ```
 P:\github\
-  ├── obsidian\
-  │   └── document-hub\
-  │       └── knowledge-base\
+  ├── obsidian\document-hub\knowledge-base\
   ├── repo-a\
   └── repo-b\
 ```
 
-> The only hard rule: `obsidian\` must be one level below your root, alongside your repos. Everything inside `obsidian\` — the vault folder names and nesting — is whatever you configured in Obsidian.
+> The only hard rule: the folder that contains `knowledge-base/` must be one level below your root, alongside your repos.
 
 ---
 
@@ -49,23 +59,28 @@ Open your user settings file:
 - **macOS:** `~/Library/Application Support/Code/User/settings.json`
 - **Linux:** `~/.config/Code/User/settings.json`
 
-Add the entries using relative paths. VS Code resolves them from the open workspace root, so `..` goes up from the repo to your root, then into the vault.
+Add the entries using relative paths. VS Code resolves them from the open workspace root.
+
+Choose one profile:
+
+- **Profile A (knowledge-base is sibling of repos):** `../knowledge-base/...`
+- **Profile B (knowledge-base inside vault path):** `../obsidian/{your-internal-path}/knowledge-base/...`
+
+Use the profile that matches your actual folder layout.
 
 ```json
 "chat.agentFilesLocations": {
-  "../obsidian/{your-internal-path}/knowledge-base/agents": true
+  "../knowledge-base/agents": true
 },
 "chat.instructionsFilesLocations": {
-  "../obsidian/{your-internal-path}/knowledge-base/instructions": true
+  "../knowledge-base/instructions": true
 },
 "chat.promptFilesLocations": {
-  "../obsidian/{your-internal-path}/knowledge-base/prompts": true
+  "../knowledge-base/prompts": true
 }
 ```
 
-Replace `{your-internal-path}` with the folder path inside your vault that leads to `knowledge-base` — whatever you named your vault folders in Obsidian.
-
-**Example** for a developer whose vault path is `obsidian\document-hub\knowledge-base`:
+**Example (Profile B)** for a developer whose vault path is `obsidian\document-hub\knowledge-base`:
 
 ```json
 "chat.agentFilesLocations": {
@@ -83,7 +98,7 @@ Replace `{your-internal-path}` with the folder path inside your vault that leads
 |---|---|
 | `chat.agentFilesLocations` | Shared agents appear in the VS Code agent picker in every repo |
 | `chat.instructionsFilesLocations` | Shared instruction files are available to Copilot in every repo |
-| `chat.promptFilesLocations` | Shared slash commands (`/init-codespace`, `/create-feature`, etc.) work in every repo |
+| `chat.promptFilesLocations` | Shared slash commands (`/kb-bootstrap-repo`, `/kb-feature-start`, etc.) work in every repo |
 
 ---
 
@@ -101,7 +116,7 @@ Once complete:
 
 Once this setup is complete, you are ready to initialize any repository:
 
-→ Run `/init-codespace` in VS Code Copilot Chat
+→ Run `/kb-bootstrap-repo` in VS Code Copilot Chat
 
 ---
 

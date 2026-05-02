@@ -1,3 +1,12 @@
+---
+documentType: 'agent'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Agent — Staff Engineer
 
 ## Role
@@ -37,10 +46,9 @@ Human / Engineer
 
 ## Owned Phases (feature-workflow)
 
-| Phase | Action |
-|---|---|
-| **Clarification** | Leads technical clarification; produces `clarification.md` if needed |
-| **Plan (review)** | Reviews and approves `plan.md` before it goes to human |
+| Phase                          | Action                                                                                 |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| **Plan (review)**              | Reviews and approves `plan.md` before it goes to human                                 |
 | **Implementation (oversight)** | Monitors progress, unblocks agents, performs code reviews, reviews `implementation.md` |
 
 ---
@@ -68,3 +76,9 @@ Human / Engineer
 ---
 
 *Last updated: 2026-04-21*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

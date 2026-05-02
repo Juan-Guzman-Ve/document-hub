@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Agent Prompting
 
 > **Purpose:** Define how the master agent must brief and delegate tasks to subagents — ensuring clear scope, consistent execution, and no assumptions.
@@ -128,3 +137,9 @@ At the end of every task, the subagent must report:
 ---
 
 *Last updated: 2026-04-21*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

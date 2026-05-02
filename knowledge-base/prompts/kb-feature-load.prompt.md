@@ -5,6 +5,13 @@ inputs:
   - id: featureIdentifier
     description: 'Feature name (e.g. user-authentication) or feature code (e.g. AB#1234 or just 1234)'
     type: promptString
+documentType: 'prompt'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
 ---
 
 You are loading an existing feature. Load the feature-loading instruction into your context now:
@@ -21,7 +28,7 @@ Follow each step below in order.
 
 Read `copilot-instructions.md` at the repository root and extract the **Feature Folder** path.
 
-If `copilot-instructions.md` is missing or has no Feature Folder section, stop and tell the human — the repo must be initialized first using `/init-codespace`.
+If `copilot-instructions.md` is missing or has no Feature Folder section, stop and tell the human — the repo must be initialized first using `/kb-bootstrap-repo`.
 
 ---
 
@@ -45,7 +52,7 @@ Read every file present in the matched feature folder:
 - `plan.md`
 - `tasks.md`
 - `implementation.md`
-- `context/context-latest.md` (if present)
+- `context/latest.md` (if present)
 
 Do not fail if any files are missing — note their absence.
 

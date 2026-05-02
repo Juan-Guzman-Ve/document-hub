@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Testing Strategy
 
 > **Purpose:** Define how, what, and when to test — with a focus on tests that tell a story and validate real behavior.
@@ -217,3 +226,9 @@ Co-locate tests with the code they test or use a parallel `/tests` folder — fo
 ---
 
 *Last updated: 2026-04-20*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

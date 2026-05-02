@@ -1,3 +1,12 @@
+---
+documentType: 'note'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Repository Init Workflow
 
 > **Purpose:** Define the initialization process a master agent must follow when entering a repository that does not yet have a `copilot-instructions.md` referencing this knowledge base.
@@ -7,7 +16,7 @@
 
 ## How to Start This Workflow
 
-Run this workflow by typing `/init-codespace` in VS Code Copilot Chat. The prompt is available in every repository via the global `chat.promptFilesLocations` user setting — see the Developer Environment Setup guide for how to configure this.
+Run this workflow by typing `/kb-bootstrap-repo` in VS Code Copilot Chat. The prompt is available in every repository via the global `chat.promptFilesLocations` user setting — see the Developer Environment Setup guide for how to configure this.
 
 ---
 
@@ -15,7 +24,7 @@ Run this workflow by typing `/init-codespace` in VS Code Copilot Chat. The promp
 
 Before running this workflow, the developer must have completed the one-time machine setup:
 
-→ [[../guides/developer-environment-setup|Developer Environment Setup]]
+→ [[guides/developer-environment-setup|Developer Environment Setup]]
 
 This ensures shared agents are available in VS Code before the workspace file exists.
 
@@ -218,6 +227,10 @@ Save this file as **`{repo-name}.code-workspace`** at the repository root (or on
     {
       "name": "{repo-name}",
       "path": "."
+    },
+    {
+      "name": "knowledge-base",
+      "path": "../obsidian/{your-internal-path}/knowledge-base"
     }
   ],
   "settings": {
@@ -240,6 +253,7 @@ Save this file as **`{repo-name}.code-workspace`** at the repository root (or on
 **What the workspace file does:**
 
 - Registers agents, instructions, and prompts from the knowledge base via relative paths — `..` navigates from the repo up to the shared root, then into the vault
+- Opens both the repo and the knowledge base as workspace folders so all linked files are visible to the agent
 - Paths work because `obsidian\` is always at the same level as repositories (the structural rule described in the Developer Environment Setup guide)
 - Auto-loads core instruction files into Copilot's context for code generation, test generation, and code review
 
@@ -307,3 +321,9 @@ Once approved, both files are saved. The init workflow is complete.
 ---
 
 *Last updated: 2026-04-22*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

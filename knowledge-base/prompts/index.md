@@ -1,3 +1,12 @@
+---
+documentType: 'index'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Prompts Index
 
 > This document is the entry point for all executable prompt commands. Each prompt is available as a slash command in VS Code Copilot Chat via `chat.promptFilesLocations`. Type the command directly — no manual briefing required.
@@ -12,7 +21,7 @@ Prompts are invoked by typing their slash command in VS Code Copilot Chat. Some 
 
 ## Prompts
 
-### [[init-codespace.prompt|/init-codespace]]
+### [[kb-bootstrap-repo.prompt|/kb-bootstrap-repo]]
 
 Initializes a repository that has no `copilot-instructions.md` or no reference to the knowledge base. Runs the full 4-phase workflow: Discover (auto-scans the repo), Confirm (gathers stack and path details from the human), Generate (produces `copilot-instructions.md` + `.code-workspace`), and Validate (human approval before writing).
 
@@ -22,7 +31,7 @@ Initializes a repository that has no `copilot-instructions.md` or no reference t
 
 ---
 
-### [[load-feature.prompt|/load-feature]]
+### [[kb-feature-load.prompt|/kb-feature-load]]
 
 Loads an existing feature by name or ticket code. Resolves the feature folder from `copilot-instructions.md`, reads every document present (`proposal.md`, `spec.md`, `plan.md`, `tasks.md`, `implementation.md`, and any context snapshot), determines the current phase, and presents a full status summary. Highlights any tasks already `in progress` so the human can resume immediately.
 
@@ -32,19 +41,19 @@ Loads an existing feature by name or ticket code. Resolves the feature folder fr
 
 ---
 
-### [[create-feature.prompt|/create-feature]]
+### [[kb-feature-start.prompt|/kb-feature-start]]
 
 Scaffolds a new feature from scratch. Fetches the Azure DevOps work item to seed the proposal with real ticket content, creates the `AB#{number}` branch, resolves the feature folder path from `copilot-instructions.md`, suggests a folder name from the ticket title, and generates a pre-filled `proposal.md` using the ticket description and acceptance criteria as a head start.
 
 **When to use:** Starting any new feature backed by an Azure DevOps backlog item.
 **Inputs:** Azure DevOps item number (prompted on run).
-**Reference:** [[feature-workflow|Feature Development Workflow]], [[get-azure-work-item|Get Azure Work Item]]
+**Reference:** [[feature-workflow|Feature Development Workflow]], [[skills/get-azure-work-item.skill|Get Azure Work Item]]
 
 ---
 
-### [[compress-context.prompt|/compress-context]]
+### [[kb-feature-context-save.prompt|/kb-feature-context-save]]
 
-Compresses the current feature session into a dense `context-latest.md` snapshot stored inside the feature's `context/` subfolder. Preserves previous snapshots by renaming them with a timestamp. Enables short context windows during active work and allows any future agent to resume the feature instantly by reading the latest snapshot.
+Compresses the current feature session into a dense `latest.md` snapshot stored inside the feature's `context/` subfolder. Preserves previous snapshots by renaming them with a timestamp. Enables short context windows during active work and allows any future agent to resume the feature instantly by reading the latest snapshot.
 
 **When to use:** Any time you want to trim the context window, pause a feature session, or hit a phase boundary.
 **Inputs:** None — feature folder is resolved from the current git branch and `copilot-instructions.md`.
@@ -52,7 +61,7 @@ Compresses the current feature session into a dense `context-latest.md` snapshot
 
 ---
 
-### [[research.prompt|/research]]
+### [[kb-research.prompt|/kb-research]]
 
 Runs a structured technical research task using parallel subagents — one per source type (official docs, GitHub, technical blogs). Scopes the questions first, confirms with the human, then spawns all subagents in parallel and synthesizes a Research Summary with conclusions, gaps, and recommendations. Optionally saves a research note to the vault.
 
@@ -60,7 +69,7 @@ Runs a structured technical research task using parallel subagents — one per s
 **Inputs:** Research topic + stack/version context (both prompted on run).
 **Reference:** [[research-instructions|Research Instructions]], [[agent-prompting|Agent Prompting]]
 
-### [[write-spec.prompt|/write-spec]]
+### [[kb-feature-spec.prompt|/kb-feature-spec]]
 
 Executes Phase 1 of the Feature Development Workflow. Reads the human-authored `proposal.md` and drafts `spec.md` — defining what the feature is, the main happy path, key test scenarios, and what is out of scope. Presents the draft to the human before writing. Requires explicit approval before saving.
 
@@ -70,7 +79,7 @@ Executes Phase 1 of the Feature Development Workflow. Reads the human-authored `
 
 ---
 
-### [[write-plan.prompt|/write-plan]]
+### [[kb-feature-plan.prompt|/kb-feature-plan]]
 
 Executes Phase 2 of the Feature Development Workflow. Reads the approved `spec.md` and drafts `plan.md` — defining the technical approach: stack, architecture, components, data design, and risks. Applies `design-patterns.md` and `principles.md`. Presents the draft before writing and requires explicit approval.
 
@@ -80,7 +89,7 @@ Executes Phase 2 of the Feature Development Workflow. Reads the approved `spec.m
 
 ---
 
-### [[write-tasks.prompt|/write-tasks]]
+### [[kb-feature-tasks.prompt|/kb-feature-tasks]]
 
 Executes Phase 3 of the Feature Development Workflow. Reads the approved `plan.md` and drafts `tasks.md` — breaking the plan into self-contained tasks, each with a precise description and test cases defined upfront in Given/When/Then format. Presents the draft before writing and requires explicit approval.
 
@@ -90,7 +99,7 @@ Executes Phase 3 of the Feature Development Workflow. Reads the approved `plan.m
 
 ---
 
-### [[implement.prompt|/implement]]
+### [[kb-feature-implement.prompt|/kb-feature-implement]]
 
 Executes Phase 4 of the Feature Development Workflow. Works through each task in the approved `tasks.md`, implementing code and writing tests per the task's defined test cases. Updates task statuses in real time, stops and reports on blockers, and produces `implementation.md` as the completion record. When delegating to backend or frontend developer subagents, the brief always includes the full set of implementation instruction files so they operate with complete coding context.
 
@@ -98,29 +107,13 @@ Executes Phase 4 of the Feature Development Workflow. Works through each task in
 **Inputs:** None — reads `tasks.md`, `plan.md`, `spec.md`, and `copilot-instructions.md` automatically.
 **Reference:** [[feature-workflow|Feature Development Workflow]], [[coding-style|Coding Style]], [[principles|Software Principles]], [[design-patterns|Design Patterns]], [[testing-strategy|Testing Strategy]], [[git-conventions|Git Conventions]]
 
-### [[eod.prompt|/eod]]
+### [[kb-eod.prompt|/kb-eod]]
 
 Generates an end-of-day progress summary for the current session following `eod-instructions.md`. Output is plain text with a `[eod]` tag and a bullet list — no markdown — ready to paste directly into an Azure DevOps discussion item.
 
 **When to use:** End of any work session.
 **Inputs:** None — summarizes work done in the current session.
 **Reference:** [[eod-instructions|EOD Summary Instructions]]
-
----
-
-| Command             | When to use                                                             |
-| ------------------- | ----------------------------------------------------------------------- |
-| `/init-codespace`   | Entering a repo with no `copilot-instructions.md`                       |
-| `/load-feature`     | Resuming or inspecting an existing feature by name or ticket code       |
-| `/create-feature`   | Starting a new feature with an Azure backlog item                       |
-| `/write-spec`       | Drafting `spec.md` after the proposal is ready                          |
-| `/write-plan`       | Drafting `plan.md` after the spec is approved                           |
-| `/write-tasks`      | Drafting `tasks.md` after the plan is approved                          |
-| `/implement`        | Executing tasks and producing `implementation.md`                       |
-| `/compress-context` | Saving context before pausing, resuming, or trimming the context window |
-| `/research`         | Researching a technical topic before planning or implementation         |
-
-| `/eod`              | Generate a plain-text end-of-day progress summary                       |
 
 ---
 

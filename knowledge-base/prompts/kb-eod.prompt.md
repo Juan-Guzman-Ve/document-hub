@@ -1,6 +1,13 @@
 ---
 mode: 'agent'
 description: 'Generate an end-of-day progress summary for the current session'
+documentType: 'prompt'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
 ---
 
 You are generating an end-of-day progress summary. Load the EOD instructions now:

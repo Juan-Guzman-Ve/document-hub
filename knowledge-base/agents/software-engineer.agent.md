@@ -1,3 +1,12 @@
+---
+documentType: 'agent'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Agent — Software Engineer
 
 ## Role
@@ -34,9 +43,9 @@ Translates the approved spec into a concrete technical plan and actionable task 
 
 ## Owned Phases (feature-workflow)
 
-| Phase     | Action                                                                  |
-| --------- | ----------------------------------------------------------------------- |
-| **Plan**  | Creates `plan.md` — stack, architecture, components, data design        |
+| Phase | Action |
+|---|---|
+| **Plan** | Creates `plan.md` — stack, architecture, components, data design |
 | **Tasks** | Creates `tasks.md` — task list with summaries, statuses, and test cases |
 
 ---
@@ -67,3 +76,9 @@ features/{feature-name}-{TICKET}/
 ---
 
 *Last updated: 2026-04-21*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 
 # Load Feature Instruction
 
@@ -34,7 +43,7 @@ If the input is an unformatted number (e.g. `1234`), treat it as a feature code 
 
 1. Read `copilot-instructions.md` at the repository root
 2. Extract the **Feature Folder** path (e.g. `src/Features/`, `app/features/`)
-3. If `copilot-instructions.md` is missing or has no Feature Folder section, stop and tell the human — the repo must be initialized first using `/init-codespace`
+3. If `copilot-instructions.md` is missing or has no Feature Folder section, stop and tell the human — the repo must be initialized first using `/kb-bootstrap-repo`
 
 ---
 
@@ -61,7 +70,7 @@ Read every file present in the matched feature folder. The expected documents ar
 | `plan.md` | Phase 2 | Optional |
 | `tasks.md` | Phase 3 | Optional |
 | `implementation.md` | Phase 4 | Optional |
-| `context/context-latest.md` | Any | Optional — read if present |
+| `context/latest.md` | Any | Optional — read if present |
 
 Read every file that exists. Do not fail if any are missing — their absence is itself useful information about the current phase.
 
@@ -92,7 +101,7 @@ Present a structured summary to the human using this format:
 **Folder:** {full path to feature folder}
 **Ticket:** {AB# number, or "not found" if absent}
 **Current Phase:** {phase name}
-**Next Step:** {what should happen next, e.g. "Resume /write-spec", "Continue /implement", "Feature is complete"}
+**Next Step:** {what should happen next, e.g. "Resume /kb-feature-spec", "Continue /kb-feature-implement", "Feature is complete"}
 
 ---
 
@@ -123,10 +132,16 @@ After presenting the summary, tell the human you are ready to continue and ask w
 ## Rules
 
 - **Never start any phase automatically.** Load and summarize only. Wait for the human to direct the next action.
-- **Always load `context/context-latest.md` if it exists.** It may contain state from a previous session that supersedes earlier documents.
+- **Always load `context/latest.md` if it exists.** It may contain state from a previous session that supersedes earlier documents.
 - **Do not modify any files during this command.** This is a read-only operation.
 - **If `tasks.md` is loaded and has tasks `in progress`**, highlight those specifically so the human knows work was already in flight.
 
 ---
 
 *Last updated: 2026-04-29*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

@@ -1,3 +1,12 @@
+---
+documentType: 'instruction'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
+---
 # Design Patterns
 
 > **Purpose:** Reference guide for pattern selection. Patterns are applied **only when they solve a concrete, existing problem** — not preemptively.
@@ -195,3 +204,9 @@ Generics enhance several of these patterns (e.g., `IRepository<T>`, `IHandler<TC
 ---
 
 *Last updated: 2026-04-20*
+
+
+---
+
+*Change reason: 2026-05-01 consistency and governance update*
+*Impacted files: knowledge-base-wide policy alignment*

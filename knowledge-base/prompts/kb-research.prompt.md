@@ -8,15 +8,22 @@ inputs:
   - id: context
     description: 'Tech stack and version context (e.g. ".NET 8, Oracle 19c, Dapper")'
     type: promptString
+documentType: 'prompt'
+owner: 'knowledge-base'
+phase: 'n/a'
+appliesTo: 'all'
+canonical: 'true'
+version: '1.0'
+supersedes: 'none'
 ---
 
 You are conducting a technical research task. Load the research instructions into your context now:
 
-#file:.[[research-instructions| Research Instructions]]
+#file: [[research-instructions|Research Instructions]]
 
 Also load the agent prompting guide so subagents are briefed correctly:
 
-#file:..[[agent-prompting|Agent Prompting]]
+#file: [[agent-prompting|Agent Prompting]]
 
 **Research topic:** ${input:topic}
 **Stack / context:** ${input:context}
