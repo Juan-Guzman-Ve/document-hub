@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "knowledge-base/prompts/index.md",
+                "file": "Personal/Ideas/Finance Tracker.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Finance Tracker"
             }
           }
         ]
@@ -185,6 +185,11 @@
   },
   "active": "4ab80cc3f7dc06f6",
   "lastOpenFiles": [
+    "knowledge-base.7z",
+    "knowledge-base/prompts/index.md",
+    "Personal/Ideas/Finance Tracker.md",
+    "Personal/Ideas",
+    "Personal",
     "knowledge-base/skills/new-feature-branch.skill.md",
     "knowledge-base/instructions/index.md",
     "knowledge-base/guides/developer-environment-setup.md",
@@ -211,15 +216,10 @@
     "knowledge-base/instructions/git-conventions.md",
     "knowledge-base/instructions/feature-workflow.md",
     "knowledge-base/instructions/eod-instructions.md",
-    "knowledge-base/instructions/document-governance.md",
-    "knowledge-base/instructions/design-patterns.md",
-    "knowledge-base/instructions/context-compression.md",
     "knowledge-base/tools/task-alias.ps1",
     "knowledge-base/tools/add-frontmatter.ps1",
     "knowledge-base/tools/validate-knowledge-base.ps1",
     "knowledge-base/tools/sync-skills.ps1",
-    "knowledge-base/tools",
-    "knowledge-base/bruno/Signals/Users/Get User BY Id.yml",
-    "knowledge-base/bruno/Signals/Users/folder.yml"
+    "knowledge-base/tools"
   ]
 }
