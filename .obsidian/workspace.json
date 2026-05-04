@@ -185,6 +185,9 @@
   },
   "active": "eb018de838d6e94d",
   "lastOpenFiles": [
+    "Personal/Ideas/Finance Tracker.md",
+    "Personal/Ideas",
+    "Personal",
     "knowledge-base/tools/validate-knowledge-base.ps1",
     "knowledge-base/tools/task-alias.ps1",
     "knowledge-base/tools/sync-skills.ps1",
@@ -217,9 +220,6 @@
     "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2.1 - Arboles Derivacion.md",
     "knowledge-base/guides/developer-environment-setup.md",
     "knowledge-base/toexport.7z",
-    "knowledge-base/toexport/agents - copia/qa-engineer.agent.md",
-    "knowledge-base/toexport/agents - copia",
-    "knowledge-base/toexport/instructions - copia",
-    "knowledge-base/toexport/skills - copia"
+    "knowledge-base/toexport/agents - copia/qa-engineer.agent.md"
   ]
 }
