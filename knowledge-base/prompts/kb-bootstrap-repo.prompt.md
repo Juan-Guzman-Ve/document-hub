@@ -1,6 +1,6 @@
 ---
 mode: 'agent'
-description: 'Initialize a repository — scan codebase, confirm stack, generate copilot-instructions.md + .code-workspace'
+description: 'Initialize a repository — scan codebase, confirm stack, generate copilot-instructions.md (and optional .code-workspace)'
 documentType: 'prompt'
 owner: 'knowledge-base'
 phase: 'n/a'
@@ -20,13 +20,13 @@ Mandatory behavior:
 
 1. Follow phases in order: Discover -> Confirm -> Generate -> Validate.
 2. Do not generate or write files before explicit human approval in Validate.
-3. Present both generated files in full before writing.
+3. Present all generated files in full before writing.
 4. Do not invent missing project details; ask and keep placeholders when unanswered.
 5. Do not proceed to feature work until init is complete and approved.
 
 Expected outputs:
 
 - Repository root `copilot-instructions.md`
-- Repository root `{repo-name}.code-workspace`
+- Optional repository root `{repo-name}.code-workspace` (only if requested)
 
 If an existing `copilot-instructions.md` is present, present a diff and ask for explicit overwrite approval before writing.

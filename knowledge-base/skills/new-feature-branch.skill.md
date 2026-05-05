@@ -42,7 +42,7 @@ Branch naming must follow [[git-conventions|Git Conventions]]. If the user provi
 2. Run the script:
 
 ```powershell
-pwsh ./knowledge-base/tools/new-feature-branch.ps1 -BranchName "{branchName}"
+pwsh "$HOME/.kb/tools/new-feature-branch.ps1" -BranchName "{branchName}" -RepoPath "."
 ```
 
 3. Verify the output confirms the correct branch is now active

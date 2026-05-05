@@ -86,7 +86,8 @@ Present the Discovery Summary and ask the human to confirm or correct:
 | What is the tech stack? (confirm or correct detected stack) | Goes into the Stack section |
 | Where should the feature folder live? (confirm candidate or specify path) | Used by `feature-workflow.md` for all feature documents |
 | Are there any repo-specific conventions that override the global instructions? | Goes into the Repo-Specific Conventions section |
-| What is the internal path within your vault? (the folders between `obsidian\` and `knowledge-base\`, e.g. `document-hub`) | Used to build the relative path in the `.code-workspace` settings |
+| Is the shared knowledge base installed and registered from `~/.kb` in VS Code user settings? | Confirms shared agents/instructions/prompts are globally discoverable |
+| Do you want a repo-specific `.code-workspace` file generated? | Optional output; used only for repo-local VS Code settings |
 | *(If submodules detected)* What does each submodule provide? What shared logic or contracts does this repo consume from them? | Goes into the Submodules section — critical context for agents writing code that touches shared logic |
 | *(Optional)* Are there any MCP database connections available for this repository? If yes, for each one provide: a connection name, the MCP server identifier, the database or schema it connects to, and what explorational purpose it serves. | Goes into the MCP Database Connections section — enables agents to query live data during research and explorational tasks scoped to this repo |
 
@@ -96,9 +97,9 @@ Present the Discovery Summary and ask the human to confirm or correct:
 
 ## Phase 3 — Generate
 
-**Goal:** Create two files — `copilot-instructions.md` at the repository root, and a `.code-workspace` file that opens the repo and the Document Hub together in VS Code.
+**Goal:** Create `copilot-instructions.md` at the repository root, and optionally generate `.code-workspace` only if the human explicitly requests it.
 
-Both files are needed. The `copilot-instructions.md` configures the agent for this repo. The `.code-workspace` file solves the **file visibility problem**: agent definitions and instruction files live in the Document Hub, not in the repo — VS Code and Copilot can only access files that are part of the open workspace. By including both folders in one workspace file, all knowledge base files become visible to the agent without copying anything into the repo.
+`copilot-instructions.md` is required. `.code-workspace` is optional because shared knowledge base resources are expected to be installed and registered globally from `~/.kb`.
 
 ---
 
@@ -187,21 +188,28 @@ The following connections are available for explorational and research tasks. Us
 
 ## Knowledge Base & Instructions
 
-This repository uses the shared knowledge base. It is available in VS Code via
-the workspace file — open `{repo-name}.code-workspace` to access it.
+This repository uses the shared knowledge base installed in the user profile:
+
+- `~/.kb`
+
+Ensure VS Code user settings include these locations:
+
+- `chat.agentFilesLocations` -> `~/.kb/agents`
+- `chat.instructionsFilesLocations` -> `~/.kb/instructions`
+- `chat.promptFilesLocations` -> `~/.kb/prompts`
 
 All agents must read and follow the instructions there. Key files:
 
-| Instruction | Path (relative to Document Hub root) |
+| Instruction | Path |
 |---|---|
-| Instructions Index | `knowledge-base/instructions/index.md` |
-| Agent Roster | `knowledge-base/agents/index.md` |
-| Feature Workflow | `knowledge-base/instructions/feature-workflow.md` |
-| Git Conventions | `knowledge-base/instructions/git-conventions.md` |
-| Coding Style | `knowledge-base/instructions/coding-style.md` |
-| Principles | `knowledge-base/instructions/principles.md` |
-| Design Patterns | `knowledge-base/instructions/design-patterns.md` |
-| Testing Strategy | `knowledge-base/instructions/testing-strategy.md` |
+| Instructions Index | `~/.kb/instructions/index.md` |
+| Agent Roster | `~/.kb/agents/index.md` |
+| Feature Workflow | `~/.kb/instructions/feature-workflow.md` |
+| Git Conventions | `~/.kb/instructions/git-conventions.md` |
+| Coding Style | `~/.kb/instructions/coding-style.md` |
+| Principles | `~/.kb/instructions/principles.md` |
+| Design Patterns | `~/.kb/instructions/design-patterns.md` |
+| Testing Strategy | `~/.kb/instructions/testing-strategy.md` |
 
 ---
 
@@ -217,9 +225,9 @@ All agents must read and follow the instructions there. Key files:
 
 ---
 
-### 3b — `.code-workspace` Template
+### 3b — Optional `.code-workspace` Template
 
-Save this file as **`{repo-name}.code-workspace`** at the repository root (or one level above, alongside the repo folder — wherever is convenient for the human to open it from).
+Generate this only if the human asked for a workspace file.
 
 ```json
 {
@@ -227,58 +235,20 @@ Save this file as **`{repo-name}.code-workspace`** at the repository root (or on
     {
       "name": "{repo-name}",
       "path": "."
-    },
-    {
-      "name": "knowledge-base",
-      "path": "../obsidian/{your-internal-path}/knowledge-base"
     }
-  ],
-  "settings": {
-    "github.copilot.chat.codeGeneration.instructions": [
-      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/coding-style.md" },
-      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/principles.md" }
-    ],
-    "github.copilot.chat.testGeneration.instructions": [
-      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/testing-strategy.md" },
-      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/coding-style.md" }
-    ],
-    "github.copilot.chat.reviewSelection.instructions": [
-      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/coding-style.md" },
-      { "file": "../obsidian/{your-internal-path}/knowledge-base/instructions/principles.md" }
-    ]
-  }
+  ]
 }
 ```
 
-**What the workspace file does:**
-
-- Registers agents, instructions, and prompts from the knowledge base via relative paths — `..` navigates from the repo up to the shared root, then into the vault
-- Opens both the repo and the knowledge base as workspace folders so all linked files are visible to the agent
-- Paths work because `obsidian\` is always at the same level as repositories (the structural rule described in the Developer Environment Setup guide)
-- Auto-loads core instruction files into Copilot's context for code generation, test generation, and code review
-
-**Fill in before saving:**
-
-| Placeholder | Replace with |
-|---|---|
-| `{repo-name}` | The repository name (e.g. `my-api`) |
-| `{your-internal-path}` | The folder path inside your vault leading to `knowledge-base` (e.g. `document-hub`) — confirmed in Phase 2 |
-
-**Known pitfalls — agents not appearing in the VS Code picker:**
-
-| Mistake | Why it fails | Fix |
-|---|---|---|
-| Agent files in `.github/agents/` (not `agents/`) | This knowledge base stores agents in `knowledge-base/agents/` — `chat.agentFilesLocations` points there. Moving them to `.github/agents/` breaks discovery | Keep agents in `knowledge-base/agents/` |
-| `chat.agentFilesLocations` with array format: `["path"]` | The setting uses object format `{ "path": true }` — array is silently ignored | Use object format as shown in the template |
-| Opening the repo folder directly | Workspace settings in `.code-workspace` only apply when the workspace file is opened — the folder bypasses them | Open `{repo-name}.code-workspace`, not the folder |
+Use this file only for repo-local workspace settings. Shared knowledge base paths must stay in user settings.
 
 ---
 
 ## Phase 4 — Validate
 
-**Goal:** Confirm both generated files are correct before any feature work begins.
+**Goal:** Confirm generated output is correct before any feature work begins.
 
-Present the generated `copilot-instructions.md` and `.code-workspace` to the human and ask for explicit approval.
+Present the generated `copilot-instructions.md` (and `.code-workspace` only if requested) to the human and ask for explicit approval.
 
 **Checklist before marking this phase complete:**
 
@@ -290,8 +260,8 @@ Present the generated `copilot-instructions.md` and `.code-workspace` to the hum
 - [ ] Repo-specific conventions are noted (or explicitly marked as none)
 - [ ] Submodules section present and accurate *(or explicitly omitted if no submodules)*
 - [ ] MCP Database Connections section present and accurate *(or explicitly omitted if none configured)*
-- [ ] `.code-workspace` includes the repo folder and the correct Document Hub path
-- [ ] Human has opened the `.code-workspace` file in VS Code and confirmed both folders are visible
+- [ ] VS Code user settings point to `~/.kb/{agents,instructions,prompts}`
+- [ ] `.code-workspace` validated only if it was requested
 
 Once approved, both files are saved. The init workflow is complete.
 
@@ -320,7 +290,7 @@ Once approved, both files are saved. The init workflow is complete.
 
 ---
 
-*Last updated: 2026-04-22*
+*Last updated: 2026-05-04*
 
 
 ---

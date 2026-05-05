@@ -1,22 +1,54 @@
 param(
-    [string]$Root = "knowledge-base"
+    [string]$Root = ""
 )
 
 $errors = New-Object System.Collections.Generic.List[string]
+
+if ([string]::IsNullOrWhiteSpace($Root)) {
+    $Root = Join-Path $PSScriptRoot '..'
+}
+
+$resolvedRoot = (Resolve-Path -Path $Root).Path
+
+function Get-MarkdownFiles {
+    param([string]$BasePath)
+
+    Get-ChildItem -Path $BasePath -Recurse -File -Filter "*.md" |
+        Where-Object {
+            $_.FullName -notmatch "[\\/](node_modules|\.git|\.obsidian|exports)[\\/]"
+        }
+}
+
+function Get-FileText {
+    param([string]$Path)
+
+    try {
+        $content = Get-Content -Path $Path -Raw -ErrorAction Stop
+        if ($null -eq $content) {
+            return ""
+        }
+
+        return $content
+    }
+    catch {
+        Add-Error("Unable to read file: $Path")
+        return ""
+    }
+}
 
 function Add-Error([string]$message) {
     $errors.Add($message)
 }
 
-if (!(Test-Path $Root)) {
-    throw "Root path not found: $Root"
+if (!(Test-Path $resolvedRoot)) {
+    throw "Root path not found: $resolvedRoot"
 }
 
-$mdFiles = Get-ChildItem -Path $Root -Recurse -File -Filter "*.md"
+$mdFiles = Get-MarkdownFiles -BasePath $resolvedRoot
 
 # Rule 1: Forbidden filename/content drift around latest.md naming.
 foreach ($file in $mdFiles) {
-    $text = Get-Content -Path $file.FullName -Raw
+    $text = Get-FileText -Path $file.FullName
     if ($text -match "context-latext\.md") {
         Add-Error("Typo 'context-latext.md' found in: $($file.FullName)")
     }
@@ -50,7 +82,7 @@ foreach ($file in $mdFiles) {
 
 $linkPattern = "\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|[^\]]+)?\]\]"
 foreach ($file in $mdFiles) {
-    $text = Get-Content -Path $file.FullName -Raw
+    $text = Get-FileText -Path $file.FullName
     $matches = [regex]::Matches($text, $linkPattern)
     foreach ($m in $matches) {
         $targetRaw = $m.Groups[1].Value.Trim()
@@ -62,7 +94,7 @@ foreach ($file in $mdFiles) {
         if ($targetNorm.Contains("/")) {
             $targetMd = if ($targetNorm.EndsWith(".md")) { $targetNorm } else { "$targetNorm.md" }
             $targetMd = $targetMd -replace "/", [System.IO.Path]::DirectorySeparatorChar
-            $fullCandidates = Get-ChildItem -Path $Root -Recurse -File -Filter "*.md" |
+            $fullCandidates = Get-MarkdownFiles -BasePath $resolvedRoot |
                 Where-Object {
                     ($_.FullName -replace "\\", "/").ToLower().EndsWith(($targetMd -replace "\\", "/").ToLower())
                 }
@@ -84,9 +116,9 @@ foreach ($file in $mdFiles) {
 }
 
 # Rule 4: Contradictory ownership statement checks.
-$qaPath = Join-Path $Root "agents/qa-engineer.agent.md"
+$qaPath = Join-Path $resolvedRoot "agents/qa-engineer.agent.md"
 if (Test-Path $qaPath) {
-    $qaText = Get-Content -Path $qaPath -Raw
+    $qaText = Get-FileText -Path $qaPath
     if (($qaText -match "not delegated to developers") -and ($qaText -match "developers are primary authors of integration tests")) {
         Add-Error("Contradictory QA ownership statements found in: $qaPath")
     }
@@ -100,7 +132,7 @@ $keyTermTypos = @(
 )
 
 foreach ($file in $mdFiles) {
-    $text = Get-Content -Path $file.FullName -Raw
+    $text = Get-FileText -Path $file.FullName
     foreach ($typo in $keyTermTypos) {
         if ($text -match [regex]::Escape($typo)) {
             Add-Error("Key term typo '$typo' found in: $($file.FullName)")

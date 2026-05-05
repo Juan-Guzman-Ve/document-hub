@@ -23,7 +23,7 @@ Prompts are invoked by typing their slash command in VS Code Copilot Chat. Some 
 
 ### [[kb-bootstrap-repo.prompt|/kb-bootstrap-repo]]
 
-Initializes a repository that has no `copilot-instructions.md` or no reference to the knowledge base. Runs the full 4-phase workflow: Discover (auto-scans the repo), Confirm (gathers stack and path details from the human), Generate (produces `copilot-instructions.md` + `.code-workspace`), and Validate (human approval before writing).
+Initializes a repository that has no `copilot-instructions.md` or no reference to the knowledge base. Runs the full 4-phase workflow: Discover (auto-scans the repo), Confirm (gathers stack and path details from the human), Generate (produces `copilot-instructions.md` and optional `.code-workspace`), and Validate (human approval before writing).
 
 **When to use:** First time entering any unconfigured repository.
 **Inputs:** None — discovery is automatic, confirmation is interactive.
@@ -117,4 +117,4 @@ Generates an end-of-day progress summary for the current session following `eod-
 
 ---
 
-*Last updated: 2026-04-24*
+*Last updated: 2026-05-04*

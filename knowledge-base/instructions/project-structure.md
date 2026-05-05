@@ -49,14 +49,13 @@ It should contain:
 
 ## The Role of `{repo-name}.code-workspace`
 
-Because the knowledge base (agent definitions, instruction files) lives outside the repository, VS Code and Copilot cannot access those files unless they are part of the open workspace.
+When the knowledge base is installed to `~/.kb` and registered in VS Code user settings, a `.code-workspace` file is **optional**.
 
-Each repository should have a **`.code-workspace` file** that opens both the repo folder and the `knowledge-base` folder together as a multi-root workspace. This makes all knowledge base files — including agent role definitions — visible to the agent without duplicating them into the repo.
+Use a `.code-workspace` file only when the repository needs extra shared folders or repo-specific VS Code settings.
 
-- Generated as part of the **init workflow** (`init-workflow.md`)
+- Optional output of the **init workflow** (`init-workflow.md`)
 - Stored at the repository root (or alongside it)
-- The human opens this file instead of the repo folder directly when working with Copilot
-- Contains VS Code settings that pre-load key instruction files into Copilot context automatically
+- Used for repo-specific workspace settings, not for mandatory knowledge-base discovery
 
 ### Template
 
@@ -98,7 +97,7 @@ These apply when starting a **greenfield project** or when the repo's `copilot-i
 
 ---
 
-*Last updated: 2026-04-22*
+*Last updated: 2026-05-04*
 
 
 ---

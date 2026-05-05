@@ -1,21 +1,38 @@
 # new-feature-branch.ps1
 # Creates a new feature branch based on main.
-# Usage: pwsh ./knowledge-base/tools/new-feature-branch.ps1 -BranchName "AB#1234-user-authentication"
+# Usage: pwsh "$HOME/.copilot/agents/knowledge-base/tools/new-feature-branch.ps1" -BranchName "AB#1234-user-authentication" -RepoPath "."
 
 param(
     [Parameter(Mandatory = $true)]
-    [string]$BranchName
+    [string]$BranchName,
+
+    [string]$RepoPath = "."
 )
 
 $ErrorActionPreference = 'Stop'
 
-Write-Host "Switching to main..."
-git checkout main
+$resolvedRepoPath = Resolve-Path $RepoPath
 
-Write-Host "Pulling latest from main..."
-git pull
+if (!(Test-Path (Join-Path $resolvedRepoPath '.git'))) {
+    throw "Not a git repository: $resolvedRepoPath"
+}
 
-Write-Host "Creating branch '$BranchName'..."
-git checkout -b $BranchName
+Push-Location $resolvedRepoPath
 
-Write-Host "Done. Now on branch: $(git branch --show-current)"
+try {
+    Write-Host "Working repository: $resolvedRepoPath"
+
+    Write-Host "Switching to main..."
+    git checkout main
+
+    Write-Host "Pulling latest from main..."
+    git pull
+
+    Write-Host "Creating branch '$BranchName'..."
+    git checkout -b $BranchName
+
+    Write-Host "Done. Now on branch: $(git branch --show-current)"
+}
+finally {
+    Pop-Location
+}
