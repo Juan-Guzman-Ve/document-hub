@@ -95,7 +95,7 @@ Executable slash commands for VS Code Copilot Chat. Type the command directly in
 | `/kb-feature-context-save`| Compress and save feature context to `context/latest.md`                    |
 | `/kb-feature-load`   | Resume an existing feature — locate folder, load all documents, present status summary |
 | `/kb-feature-start`  | Start a new feature — create branch, scaffold feature folder and `proposal.md` |
-| `/kb-bootstrap-repo`  | Initialize a repository — scan, confirm stack, generate `copilot-instructions.md` + `.code-workspace` |
+| `/kb-bootstrap-repo`  | Initialize a repository — scan, confirm stack, generate `copilot-instructions.md` and optional `.code-workspace` |
 | `/kb-feature-spec`      | Draft `spec.md` from the approved `proposal.md`                             |
 | `/kb-feature-plan`      | Draft `plan.md` from the approved `spec.md`                                 |
 | `/kb-feature-tasks`     | Break the approved `plan.md` into `tasks.md` with test cases                |
@@ -123,7 +123,7 @@ Human-facing documentation. These files are not loaded by agents — they are on
 
 | Guide | Purpose |
 |---|---|
-| [[guides/developer-environment-setup|Developer Environment Setup]] | One-time machine setup — folder convention and VS Code agent registration |
+| [[guides/developer-environment-setup|Developer Environment Setup]] | One-time machine setup — install into user profile and register VS Code locations |
 
 ---
 
@@ -134,6 +134,10 @@ Human-facing documentation. These files are not loaded by agents — they are on
 | `tools/validate-knowledge-base.ps1` | Validates naming drift, include directives, link targets, ownership contradictions, and key term typos |
 | `tools/sync-skills.ps1` | Syncs exported skill copies from canonical files in `skills/` |
 | `tools/task-alias.ps1` | Runs `validate-all`, `sync-all`, or `all` from a single command |
+| `build/install-knowledge-base.ps1` | Installs this knowledge base into `~/.kb` |
+| `build/install-knowledge-base-from-nuget.ps1` | Downloads package from NuGet and installs into `~/.kb` |
+| `build/uninstall-knowledge-base.ps1` | Removes installed knowledge base from user profile |
+| `build/pack-nuget.ps1` | Builds NuGet package from `knowledge-base.nuspec` |
 | `tools/new-feature-branch.ps1` | Script used by the New Feature Branch skill — not invoked directly by agents |
 
 ---
