@@ -1,0 +1,9 @@
+## Trabajadores con problemas circulatorios como población de riesgo en ambientes fríos
+
+El ser humano, como ser homotermo, depende de mecanismos fisiológicos para mantener su temperatura interna estable frente a las variaciones del ambiente. Ante la exposición al frío, el hipotálamo activa respuestas compensatorias clave, siendo la más relevante la **vasoconstricción periférica**: reducción del flujo sanguíneo hacia la piel y las extremidades para conservar el calor en los órganos vitales.
+
+Un trabajador con problemas circulatorios presenta justamente una **disfunción en este sistema**. Su capacidad para redistribuir el flujo sanguíneo de manera eficiente se encuentra comprometida, lo que genera dos consecuencias críticas: por un lado, la sangre no llega adecuadamente a las extremidades, acelerando el enfriamiento localizado y aumentando el riesgo de congelación; por otro, el organismo tampoco puede sostener el mecanismo compensatorio el tiempo suficiente para mantener la temperatura interna por encima de los 36°C, umbral mínimo establecido por los TLVs.
+
+Esto explica que el **dolor en las extremidades** —primer síntoma de alerta ante el estrés por frío— aparezca de manera más temprana e intensa en esta población, sin que necesariamente refleje el real deterioro de la temperatura corporal global, lo que introduce un riesgo adicional de subestimación del peligro.
+
+En síntesis, los problemas circulatorios debilitan la principal línea de defensa fisiológica del organismo frente al frío, haciendo a estos trabajadores significativamente más vulnerables a la hipotermia y las lesiones por frío, incluso ante exposiciones que para el resto de la población serían tolerables.
