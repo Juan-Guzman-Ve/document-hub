@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b348bb07f522b6ac",
+        "id": "2983c89791fd30e5",
         "type": "tabs",
         "children": [
           {
-            "id": "cd5055fe8807a613",
+            "id": "3f8b19f8b618c472",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Universidad de palermo/Lenguajes Automatas y Finitos/Untitled/M3 - Automatas Finitos Deterministas.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "M3 - Automatas Finitos Deterministas"
             }
           }
         ]
@@ -179,8 +183,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "cd5055fe8807a613",
+  "active": "3f8b19f8b618c472",
   "lastOpenFiles": [
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Untitled/M2 - Gramaticas y tipos.md",
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Untitled/M3 - Automatas Finitos Deterministas.md",
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Untitled/M1 - Alfabeto, Cadenas y Lenguajes.md",
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M4 - Automatas Finitos No Deterministas.md",
+    "Untitled",
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Untitled",
+    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M5 - Expresiones Regulares.md",
+    "M4 - Autómatas Finitos No Deterministas.md",
+    "Universidad de palermo/Higiene y Seguridad/Resumenes Parcial 2/M9 - Efectos del frio sobre el hombre.md",
+    "Universidad de palermo/Higiene y Seguridad/Actividades/Actividad 8 - Juan Guzman (Leg 0113389).md",
+    "Actividad 8 - Juan Guzman (Leg 0113389).pdf",
+    "Universidad de palermo/Higiene y Seguridad/Resumenes Parcial 2/M8 - Carga termica y estres termico.md",
+    "Universidad de palermo/Higiene y Seguridad/Untitled.md",
+    "Universidad de palermo/Higiene y Seguridad/Resumenes Parcial 2",
     "knowledge-base/build/publish-nuget-package.ps1",
     "knowledge-base/build/resolve-package-version.ps1",
     "knowledge-base/docs/installation-flows.md",
@@ -189,11 +207,6 @@
     "knowledge-base/artifacts/nuget/DocumentHub.KnowledgeBase.1.0.0.nupkg",
     "knowledge-base/artifacts/nuget",
     "knowledge-base/artifacts",
-    "knowledge-base/KB",
-    "knowledge-base/build/pack-nuget.ps1",
-    "knowledge-base/build/install-knowledge-base-from-nuget.ps1",
-    "knowledge-base/build/install-from-nupkg.ps1",
-    "knowledge-base/build/uninstall-knowledge-base.js",
     "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2.2 - Clasificacion de Gramaticas.md",
     "Personal/Ideas/Finance Tracker.md",
     "knowledge-base/skills/new-feature-branch.skill.md",
@@ -207,15 +220,6 @@
     "knowledge-base/prompts/kb-feature-implement.prompt.md",
     "knowledge-base/prompts/kb-feature-context-save.prompt.md",
     "knowledge-base/prompts/kb-eod.prompt.md",
-    "knowledge-base/prompts/kb-bootstrap-repo.prompt.md",
-    "knowledge-base/instructions/spec-writing.md",
-    "knowledge-base/instructions/load-feature.md",
-    "knowledge-base/instructions/eod-instructions.md",
-    "knowledge-base/instructions/document-governance.md",
-    "knowledge-base/applications/0 - Applications.md",
-    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M4 - Automatas Finitos No Deterministas.md",
-    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M3.1 - Como Armar un AFD.md",
-    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M3 - Automatas Finitos Deterministas.md",
-    "Universidad de palermo/Lenguajes Automatas y Finitos/Apuntes/M2 - Gramaticas y Tipos.md"
+    "knowledge-base/prompts/kb-bootstrap-repo.prompt.md"
   ]
 }
