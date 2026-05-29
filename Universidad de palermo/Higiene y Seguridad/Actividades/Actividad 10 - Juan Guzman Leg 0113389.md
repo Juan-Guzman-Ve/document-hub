@@ -1,0 +1,13 @@
+**Protección contra incendios — Objetivos y su aplicación**
+
+La protección contra incendios comprende el conjunto de condiciones de construcción, instalación y equipamiento orientadas a resguardar tanto a las personas como a los bienes materiales. La Ley 19.587 y su Decreto reglamentario 351/79 establecen cinco objetivos concretos:
+
+**1. Dificultar la iniciación de incendios.** Consiste en actuar sobre el triángulo del fuego antes de que se complete. En la práctica se aplica mediante la correcta clasificación de los materiales según su comportamiento ante el calor (R1 a R7), la limitación de cargas de fuego por sector, el control de fuentes de ignición (instalaciones eléctricas certificadas, prohibición de fumar en zonas de riesgo) y la separación física entre materiales incompatibles.
+
+**2. Evitar la propagación del fuego y los efectos de gases tóxicos.** Una vez iniciado un incendio, el objetivo es contenerlo en el sector de origen. Se aplica mediante la resistencia al fuego de los elementos constructivos (muros, columnas, losas con valores F30 a F180 según riesgo y carga de fuego) y la compartimentación del edificio en sectores de incendio. Los gases tóxicos se controlan con sistemas de ventilación y evacuación de humos.
+
+**3. Asegurar la evacuación de las personas.** Implica garantizar que todos los ocupantes puedan abandonar el edificio de forma segura antes de que las condiciones sean incompatibles con la vida. Se aplica definiendo el factor de ocupación del sector, calculando el coeficiente de salida, dimensionando correctamente las salidas de emergencia y las cajas de escalera (incombustibles, con puertas de doble contacto y cierre automático), y estableciendo planes de evacuación con simulacros periódicos.
+
+**4. Facilitar el acceso y las tareas de los bomberos.** De nada sirve que los bomberos lleguen si no pueden ingresar y operar eficazmente. Se aplica garantizando accesos vehiculares al edificio sin obstáculos, señalización de hidrantes externos, planos del edificio disponibles, y sectorizaciones que permitan aislar el foco sin comprometer la estructura general.
+
+**5. Proveer instalaciones de detección y extinción.** Es el objetivo más operativo: disponer de los medios técnicos necesarios para detectar el fuego en su origen y combatirlo. Se aplica instalando sistemas de detección (detectores iónicos, ópticos, termovelocimétricos), alarmas manuales y automáticas conectadas a una central permanentemente vigilada, matafuegos portátiles en cantidad y potencial extintor adecuados al riesgo y la carga de fuego del sector (1 cada 200 m², a no más de 20 m para clase A y 15 m para clase B), y sistemas fijos como redes de hidrantes o sprinklers en los casos que la normativa lo exige.
