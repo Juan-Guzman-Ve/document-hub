@@ -1,6 +1,6 @@
 {
   "showLineNumber": true,
-  "spellcheck": true,
+  "spellcheck": false,
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "Letter",
@@ -8,5 +8,7 @@
     "margin": "2",
     "downscalePercent": 100
   },
-  "readableLineLength": false
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
 }

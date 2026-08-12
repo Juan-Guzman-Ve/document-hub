@@ -1,4 +1,5 @@
 {
-  "cssTheme": "Blue Topaz",
-  "theme": "obsidian"
+  "cssTheme": "",
+  "theme": "obsidian",
+  "accentColor": "#ffffff"
 }

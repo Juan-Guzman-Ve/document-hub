@@ -215,4 +215,4 @@ Cada clase de equivalencia de `Q/E` se convierte en un **unico estado** del auto
 
 ## Ver tambien
 
-- [[M2 - Gramaticas y Tipos]]
+- [[Universidad de palermo/Aprobadas/Lenguajes Automatas y Finitos/ApuntesV1/M2 - Gramaticas y tipos]]
