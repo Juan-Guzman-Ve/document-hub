@@ -1,3 +1,19 @@
+---
+tags:
+  - materia/calculo-numerico
+  - tipo/guia
+materia: Calculo Numerico
+tipo: guia
+descripcion: Cronograma de la materia con 14 clases — temas por modulo, fechas de parciales (17/9 y 5/11) y temas de exposicion oral (M9 y M10).
+conceptos_clave:
+  - cronograma
+  - parciales
+  - modulos
+relacionados:
+  - "[[M1 - Teoria de errores]]"
+  - "[[M2 - Aplicacion del Diferencial al Calculo de Errores]]"
+---
+
 ## Cronograma
 
 | Módulo | Clases | Fecha | Tema                                                     |

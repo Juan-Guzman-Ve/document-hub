@@ -1,3 +1,22 @@
+---
+tags:
+  - materia/inteligencia-artificial
+  - modulo/m1
+  - tipo/actividad
+materia: Inteligencia Artificial
+modulo: M1 - Introduccion a la IA
+tipo: actividad
+descripcion: Ensayo argumentativo — la etica como condicion estructural del avance de la IA. Argumenta que los sesgos algoritmicos, el vacio regulatorio y la necesidad de confianza social hacen que la etica no sea un freno sino un requisito constitutivo del desarrollo tecnologico responsable.
+conceptos_clave:
+  - etica en IA
+  - sesgo algoritmico
+  - regulacion
+  - confianza social
+  - responsabilidad tecnologica
+relacionados:
+  - "[[M1 - Intro a la IA]]"
+---
+
 El desarrollo de la Inteligencia Artificial no puede entenderse como un proceso puramente técnico, aislado de sus consecuencias sociales. Sostengo que la ética debe influir de manera activa en el avance de la IA, y no como una limitación externa impuesta al progreso, sino como una condición estructural para que ese progreso sea sostenible y legítimo.
 
 En primer lugar, la IA opera sobre decisiones que afectan directamente a personas: acceso a crédito, diagnósticos médicos, selección de personal o justicia penal. Un sistema entrenado sin criterios éticos puede reproducir y amplificar sesgos históricos presentes en los datos, perpetuando discriminación de forma automatizada y a gran escala. La ética, en este sentido, no frena la innovación, sino que corrige un error técnico con consecuencias humanas graves.

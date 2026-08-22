@@ -1,9 +1,25 @@
 ---
+tags:
+  - materia/profesional-ti
+  - modulo/m1
+  - tipo/resumen
 materia: El Profesional de TI
-modulo: 1
-tipo: paper para debate
-fuente: Harvard Business Review, mayo 2003 (con cartas de junio 2003)
+modulo: M1 - Introduccion
+tipo: resumen
+fuente: "Harvard Business Review, mayo 2003"
 autor: Nicholas G. Carr
+descripcion: Resumen completo del paper IT Doesnt Matter de Carr (2003) — tesis de commoditizacion de TI, argumento completo, 14 respuestas del debate (Seely Brown, McFarlan, Strassmann, Gurbaxani, etc.) y replica de Carr. Tabla comparativa y preguntas para debate.
+conceptos_clave:
+  - commoditizacion de TI
+  - tecnologia de infraestructura
+  - ventaja competitiva
+  - escasez vs ubicuidad
+  - gestion de riesgos
+relacionados:
+  - "[[M1 - Resumen completo]]"
+  - "[[M1 - Defensores de Carr]]"
+  - "[[M1 - Debate Guia]]"
+  - "[[M1 - Resumen Conciso]]"
 ---
 
 # "IT Doesn't Matter" - Nicholas G. Carr (HBR, mayo 2003)

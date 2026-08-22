@@ -1,3 +1,24 @@
+---
+tags:
+  - materia/inteligencia-artificial
+  - modulo/m1
+  - tipo/teoria
+materia: Inteligencia Artificial
+modulo: M1 - Introduccion a la IA
+tipo: teoria
+descripcion: Origenes historicos de la IA (1943-2020s), definiciones formales (Minsky, Nilsson, Buchanan, Rich), sistemas inteligentes y su ciclo interno, Test de Turing y sus requisitos, representacion formal de problemas mediante espacio de estados, operadores y tipos de busqueda.
+conceptos_clave:
+  - neurona formal McCulloch-Pitts
+  - Test de Turing
+  - sistema inteligente
+  - espacio de estados
+  - operadores
+  - Sistemas Expertos
+  - Conferencia Dartmouth
+relacionados:
+  - "[[M2 - Agentes]]"
+---
+
 > [!info] Resumen Este módulo cubre los orígenes históricos de la IA, sus definiciones formales, el concepto de "sistema inteligente", el Test de Turing y la representación formal de problemas (espacio de estados, operadores, soluciones).
 
 ---
@@ -161,3 +182,7 @@
 ---
 
 _Nota generada a partir del material del Módulo 1 (Universidad de Palermo) — organizada y resumida para estudio personal._
+---
+
+## Documentos
+- [[M1 - Introduccion a la IA.pdf]]

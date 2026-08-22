@@ -4,63 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "008c861f5a5f0eb6",
+        "id": "3ce094c0350bd91f",
         "type": "tabs",
         "children": [
           {
-            "id": "071943eb40b4fcb0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Modulo 1"
-            }
-          },
-          {
-            "id": "5cbf01f9e10d00ec",
+            "id": "cdce0db6c5720224",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/Modulo 1/M1 - Diferencias entre diferentes recursos de investigacion.pdf"
+                "file": "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Documentos/M3 - Busqueda y Planificacion.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "M1 - Diferencias entre diferentes recursos de investigacion"
-            }
-          },
-          {
-            "id": "52b410dcfd75f357",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/Modulo 1/M1 - Presentacion.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "M1 - Presentacion"
-            }
-          },
-          {
-            "id": "fcdc5629a15bb986",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - IT Doesnt Matter - Resumen.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "M1 - IT Doesnt Matter - Resumen"
+              "title": "M3 - Busqueda y Planificacion"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -234,47 +193,47 @@
       "bases:Create new base": false
     }
   },
-  "active": "fcdc5629a15bb986",
+  "active": "eb018de838d6e94d",
   "lastOpenFiles": [
-    "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - Defensores de Carr.md",
-    "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - IT Doesnt Matter - Resumen.md",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Modulo 1.md",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/Modulo 1/M1 - Uso de la IA para investigaciones.pdf",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/Modulo 1/M1 - Presentacion.pdf",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/Modulo 1/M1 - Diferencias entre diferentes recursos de investigacion.pdf",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1.md",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/Modulo 1",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Comandos Obsidian para Cálculo Numérico.md",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Documentos/M1 - Notación de Punto Flotante.pdf",
+    "Personal/Ideas/Finance Tracker.md",
+    "Universidad de palermo/_REGLAS_APUNTES.md.tmp.26072.21fe58e08ad8",
+    "Universidad de palermo/_REGLAS_APUNTES.md.tmp.26072.c18a02f0c901",
+    "Universidad de palermo/_REGLAS_APUNTES.md.tmp.26072.f53ad6b4ab3b",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores.md",
+    "Universidad de palermo/_REGLAS_APUNTES.md",
+    "Universidad de palermo/_REGLAS_APUNTES.md.tmp.26072.e0d0ac2ab31b",
+    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Documentos/M3 - Busqueda y Planificacion.pdf",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1/M1 - Teoria de errores.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores.md.tmp.6212.274012aeefcc",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores.md.tmp.6212.c60be6398438",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1/M1 - Ejercicios.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Actividad.md",
     "Universidad de palermo/Cursada Actual/Calculo Numerico/Documentos/M1 - Introduccion al calculo numerico.pdf",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Informacion General.md",
+    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/M1 - Uso de la IA para investigaciones.pdf",
+    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/M1 - Presentacion.pdf",
+    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/_INDICE.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/_INDICE.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/0 - Referencia Obsidian y LaTeX.md",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/_INDICE.md",
+    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/_INDICE.md",
+    "Universidad de palermo/Cursada Actual/El Profesional de TI/_INDICE.md",
+    "Universidad de palermo/Cursada Actual/_INDICE.md",
+    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Modulo 1.md",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Modulos/M1 - Introduccion a la Simulacion.md",
+    "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M2 - Governance/M2 - IT Governance.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/0 - Informacion General.md",
+    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/M1 - Lineamientos del Proyecto.md",
+    "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - Resumen Conciso.md",
+    "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - Debate Guia.md",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Modulos/Módulo 1 — Introducción a la Simulación.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del diferencial al calbulo de errores.md",
     "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - Resumen completo.md",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Actividades",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Documentos",
-    "Universidad de palermo/Cursada Actual/El Profesional de TI/Informacion General.md",
-    "Universidad de palermo/Cursada Actual/Modelos y Silulacion/Modulos/Módulo 1 — Introducción a la Simulación.md",
-    "Universidad de palermo/Cursada Actual/Modelos y Silulacion/Untitled.md",
-    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Modulos/M1 - Intro a la IA.md",
-    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Actividades/M1 - La etica como condicion necesaria del avance de la IA.md",
-    "2026-08-03.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1 -/M1 - Teoria de errores.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1 -/M1 - Ejercicios.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Informacion General.md",
     "Untitled.canvas",
     "Resources/Pasted image 20260419145706.png",
-    "Universidad de palermo/PPS.md",
     "Resources/Pasted image 20260310190159.png",
-    "Universidad de palermo/Pendiente/AnalisisMatematicoIII/Preguntas.md",
-    "Universidad de palermo/Pendiente/AnalisisMatematicoIII/Preguntas - Ejemplos.md",
-    "Universidad de palermo/Pendiente/AnalisisMatematicoIII/Preparación Oral - Análisis 3.md",
-    "Universidad de palermo/Pendiente/AnalisisMatematicoIII/M8 - Cambio de variables & aplicaciones fisicas.md",
-    "Universidad de palermo/Aprobadas/Lenguajes Automatas y Finitos/Sin título.md",
-    "Universidad de palermo/Aprobadas/Lenguajes Automatas y Finitos/Repaso Teórico — Segundo Parcial (Módulos 6 a 9).md",
-    "Universidad de palermo/Aprobadas/Lenguajes Automatas y Finitos/ApuntesV1/M7 - Gramaticas.md",
-    "Universidad de palermo/Aprobadas/Higiene y Seguridad/Resumenes Parcial 2/M13 - Materiales Residuosos.md",
-    "Universidad de palermo/Aprobadas/Higiene y Seguridad/Actividades/Actividad 12 - Juan Guzman.md",
-    "Universidad de palermo/Aprobadas/Higiene y Seguridad/Resumenes Parcial 2/M12 - Radiaciones.md",
-    "Universidad de palermo/Pendiente/AnalisisMatematicoIII/M7 - Integrales Dobles Sobre Regiones Mas Generales.md",
-    "Universidad de palermo/Pendiente/AnalisisMatematicoIII/M6 - Integrales dobles e iteradas sobre rectangulos.md",
     "Universidad de palermo/Pendiente/AnalisisMatematicoIII/2 - Ecuaciones Diferenciales - Variable separables/Screenshot 2025-09-17 083657.png",
     "Universidad de palermo/Pendiente/AnalisisMatematicoIII/2 - Ecuaciones Diferenciales - Variable separables/Screenshot 2025-09-17 083708.png",
     "Universidad de palermo/Pendiente/AnalisisMatematicoIII/2 - Ecuaciones Diferenciales - Variable separables/Screenshot 2025-09-17 083718.png",

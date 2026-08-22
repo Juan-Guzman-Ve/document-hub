@@ -1,8 +1,23 @@
 ---
+tags:
+  - materia/profesional-ti
+  - modulo/m1
+  - tipo/debate
 materia: El Profesional de TI
-modulo: 1
-actividad: "Lectura crítica y debate: IT Doesn't Matter to CEOs"
-rol: "Grupo 1 - Defensores de Carr"
+modulo: M1 - Introduccion
+tipo: debate
+actividad: "Debate: IT Doesnt Matter to CEOs"
+rol: Grupo 1 - Defensores de Carr
+descripcion: Argumentos del Grupo 1 para defender la tesis de Carr — escasez vs ubicuidad, patron historico, caso ASAP, evidencia empirica Alinean, replicas anticipadas a los tres grupos opositores, kit de datos y cierre sugerido.
+conceptos_clave:
+  - tesis de Carr
+  - commoditizacion
+  - American Hospital Supply
+  - escasez vs ubicuidad
+relacionados:
+  - "[[M1 - IT Doesnt Matter - Resumen]]"
+  - "[[M1 - Debate Guia]]"
+  - "[[M1 - Resumen Conciso]]"
 ---
 
 # Grupo 1 - Defensores de Carr

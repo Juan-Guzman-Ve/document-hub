@@ -1,3 +1,25 @@
+---
+tags:
+  - materia/calculo-numerico
+  - modulo/m1
+  - tipo/teoria
+materia: Calculo Numerico
+modulo: M1 - Introduccion
+tipo: teoria
+descripcion: Teoria de errores numericos — notacion de punto flotante, digitos significativos, truncamiento y redondeo, error absoluto y relativo con sus cotas, y aritmetica de digitos finitos en la computadora.
+conceptos_clave:
+  - punto flotante
+  - digitos significativos
+  - truncamiento
+  - redondeo
+  - error absoluto
+  - error relativo
+relacionados:
+  - "[[M2 - Aplicacion del Diferencial al Calculo de Errores]]"
+  - "[[M1 - Ejercicios]]"
+  - "[[0 - Referencia Obsidian y LaTeX]]"
+---
+
 # Módulo 1 - Cálculo Numérico
 
 ## Introducción al cálculo numérico
@@ -31,9 +53,6 @@ graph LR
     D -->|No| F["Puede haber más de una raíz"]
 ```
 
-**Descripción de la imagen (gráfico del teorema de Bolzano):**
-Se muestra un sistema de ejes cartesianos con una curva roja creciente que representa la función f. En el eje horizontal se marcan los puntos a, c y b, en ese orden de izquierda a derecha. El punto a está sobre el eje horizontal en su extremo izquierdo, y desde ahí sube verticalmente (línea punteada azul) hasta el valor f(a), marcado en el eje vertical con un punto rojo, que se ubica por debajo del eje horizontal (es decir, f(a) es negativo). El punto b está en el extremo derecho, y desde ahí sube verticalmente hasta f(b), marcado en el eje vertical por encima del eje horizontal con otro punto rojo (f(b) es positivo). La curva f pasa por el punto c, ubicado entre a y b sobre el eje horizontal, marcado con un círculo rojo hueco, que es el punto donde la curva cruza el eje (f(c) = 0). El gráfico ilustra visualmente el Teorema de Bolzano: como f(a) y f(b) tienen signos opuestos y f es continua, existe un c entre ambos donde f se anula.
-
 ### Métodos constructivos (o algoritmos)
 
 Procedimiento ordenado, secuencial que, para una dada precisión, determina la solución aproximada del problema en un número finito de pasos.
@@ -55,8 +74,6 @@ graph TD
     Aritmética de dígitos finitos"]
 ```
 
-**Descripción:** El esquema clasifica el error en dos grandes categorías. La primera es el error de aproximación, que surge de reemplazar el problema original por uno aproximado (por ejemplo, reemplazar la derivada exacta por el cociente incremental). La segunda es el error de redondeo, relacionado con la forma en que la computadora representa los números internamente, es decir, con la aritmética de dígitos finitos.
-
 ### Ejemplo: remplazar la derivada por el cociente incremental
 
 La derivada exacta se define como:
@@ -66,8 +83,6 @@ $$f'(x_0) = \lim_{\Delta x \to 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$$
 y se remplaza (aproxima) por el cociente incremental:
 
 $$f'(x_0) \approx \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$$
-
-**Descripción de la imagen:** Se muestra una curva roja llamada f, con dos puntos marcados sobre ella unidos por líneas verticales punteadas hacia el eje horizontal. Entre esos dos puntos se traza una recta azul llamada "Secante", que pasa por ambos puntos de la curva (representa el cociente incremental, la aproximación). Además, en el primero de los puntos se traza una recta verde llamada "Tangente", que representa la derivada exacta en ese punto. El gráfico ilustra que la secante (aproximación mediante el cociente incremental) se acerca a la tangente (derivada exacta) a medida que Δx se hace más pequeño, es decir, a medida que el segundo punto se acerca al primero.
 
 ```mermaid
 graph LR
@@ -105,12 +120,6 @@ $$= \frac{\frac{1}{4}}{2} \cdot \frac{1}{2} + \frac{\frac{1}{4}+1}{2} \cdot \fra
 $$Error = \left| \frac{1}{3} - \frac{3}{8} \right| = \frac{1}{24} \approx 0{,}0417$$
 
 **Observación:** al aumentar el número de subdivisiones del intervalo (reiterar el método), el error disminuye (de $0{,}167$ a $0{,}0417$), mostrando cómo mejora la aproximación al refinar el método constructivo.
-
-**Descripción de las imágenes (dos gráficos del método del trapecio aplicado a $x^2$):**
-
-*Primer gráfico:* muestra la curva de $x^2$ (línea verde) entre 0 y 1, junto con una línea azul recta que va desde $(0,0)$ hasta $(1,1)$, formando un triángulo/trapecio que aproxima el área bajo la curva usando un solo trapecio (un solo intervalo $[0,1]$). El área sombreada en celeste representa la aproximación $T = 1/2$, que sobreestima el área real bajo la curva ($1/3$).
-
-*Segundo gráfico:* muestra la misma curva $x^2$, pero ahora el intervalo $[0,1]$ está dividido en dos subintervalos, $[0, 0{,}5]$ y $[0{,}5, 1]$, cada uno aproximado por su propio trapecio (líneas azules quebradas que siguen más de cerca a la curva verde). El área sombreada celeste se ajusta mejor a la curva real, reflejando la mejora en la aproximación ($T = 3/8$, más cercano a $1/3$ que la aproximación anterior).
 
 ```mermaid
 graph TD
@@ -227,6 +236,27 @@ graph TD
     D -->|No| F["Se trunca directamente"]
 ```
 
+> [!example] Ejercitación (P1, Ejercicios 1 a 5)
+> **1 y 2) Dígitos significativos de:**
+> $$0{,}006540 \to k=4 \qquad 12370 \to k=5 \qquad 50{,}0072 \to k=6$$
+> $$12370{,}0 \to k=6 \qquad 0{,}00123700 \to k=6 \qquad 12300134 \to k=8$$
+>
+> **3) Redondeo a cuatro dígitos significativos:**
+> $$12{,}7684 \to 12{,}77 \qquad 0{,}1428576 \to 0{,}1429 \qquad 4{,}00250 \to 4{,}003$$
+> $$7{,}99951 \to 8{,}000 \qquad 9! \to 362900$$
+>
+> **4 y 5) Redondeo (Ej. 4) vs. truncamiento (Ej. 5):**
+>
+> | $x$ | Redondeo, 2 dec. | Redondeo, 4 cifras sig. | Truncamiento, 2 dec. | Truncamiento, 4 cifras sig. |
+> |---|---|---|---|---|
+> | $555{,}666$ | $555{,}67$ | $555{,}7$ | $555{,}66$ | $555{,}6$ |
+> | $2222{,}333$ | $2222{,}33$ | $2222$ | $2222{,}33$ | $2222$ |
+> | $333{,}00$ | $333{,}00$ | $333{,}0$ | $333{,}00$ | $333{,}0$ |
+> | $9{,}9950$ | $10{,}00$ | $9{,}995$ | $9{,}99$ | $9{,}995$ |
+> | $0{,}005000$ | $0{,}00$ | $0{,}005000$ | $0{,}00$ | $0{,}005000$ |
+>
+> En $9{,}9950$ y $0{,}005000$ el dígito a descartar es exactamente 5 seguido de ceros (empate exacto): se redondea al par más cercano, por eso $9$ (impar) sube a $10$ y $0$ (par) se mantiene.
+
 ### Error Absoluto
 
 Si $x$ es el valor real de un número y $x^*$ es el número que aparece en la computadora o el "número aproximado", entonces el error absoluto $E_a$ está definido por:
@@ -311,6 +341,16 @@ graph TD
     B2 --> C
 ```
 
+> [!example] Ejercitación (P1, Ejercicio 6)
+> Error absoluto y relativo de $x$ aproximado por $x^*$, conociendo el valor exacto $x$:
+>
+> | $x$ | $x^*$ | $E_a$ | $E_r$ |
+> |---|---|---|---|
+> | $\pi$ | $22/7$ | $0{,}735\times10^{-5}$ | $0{,}234\times10^{-5}$ |
+> | $\sqrt{2}$ | $1{,}414$ | $0{,}214\times10^{-3}$ | $0{,}151\times10^{-3}$ |
+> | $e^{10}$ | $22000$ | $0{,}265\times10^{2}$ | $0{,}120\times10^{-2}$ |
+> | $8!$ | $39900$ | $0{,}420\times10^{3}$ | $0{,}104\times10^{-1}$ |
+
 ### Error de redondeo y cotas
 
 Es el error que se comete al reemplazar el número por su forma de punto flotante (sea por truncamiento o redondeo).
@@ -357,6 +397,15 @@ $$E_r = \frac{|\pi - 3{,}1416|}{\pi} = 0{,}00000234 < 0{,}000005 = 0{,}5 \times 
 
 $$\Rightarrow -k+1 = -4 \Rightarrow k = 5$$
 
+> [!example] Ejercitación (P1, Ejercicios 7 y 8)
+> **7) Aproximar $e$ por $p^*=2{,}718$. Dígitos exactos:**
+> $$E_a(e) = |e-2{,}718| = 0{,}282\times10^{-3} \qquad E_r(e) = \frac{E_a(e)}{e} = 0{,}104\times10^{-3}$$
+> $$E_r(e) < 0{,}5\times10^{-k+1} \;\Rightarrow\; k = 4 \text{ dígitos exactos}$$
+>
+> **8) Dígitos necesarios en $\sqrt{20}$ para que el error relativo no supere 0,1 por ciento:**
+> $$E_r < 1\times10^{-3}$$
+> $$0{,}5\times10^{-k+1} \leq 1\times10^{-3} \;\Rightarrow\; k \geq 4$$
+
 ### Aritmética en la computadora
 
 Además de la representación poco exacta de los números, la aritmética efectuada en una computadora no es exacta. Esta aritmética requiere el manejo de dígitos binarios con varias operaciones lógicas.
@@ -400,3 +449,18 @@ $$fl(y) = 0{,}71429$$
 
 **Nota:** en el archivo original, las filas correspondientes a $x \times y$ y $x \div y$ de la tabla, así como el valor final del "máximo error relativo", aparecen sin completar (en blanco), y la conclusión indicada en el material es que "la aritmética produce resultados satisfactorios de 5 dígitos".
 
+> [!example] Ejercitación (P1, Ejercicios 9 y 10) — redondeo vs. corte a tres dígitos
+>
+> | Operación | Valor real | $fl$ redondeo | $E_a$ red. | $E_r$ red. | $fl$ corte | $E_a$ corte | $E_r$ corte |
+> |---|---|---|---|---|---|---|---|
+> | $133+0{,}921$ | $133{,}921$ | $0{,}134\times10^3$ | $0{,}79\times10^{-1}$ | $0{,}593\times10^{-3}$ | $0{,}133\times10^3$ | $0{,}921$ | $0{,}688\times10^{-2}$ |
+> | $(121-0{,}327)-119$ | $1{,}673$ | $0{,}167\times10^1$ | $0{,}3\times10^{-2}$ | $0{,}179\times10^{-2}$ | $0{,}167\times10^1$ | $0{,}3\times10^{-2}$ | $0{,}179\times10^{-2}$ |
+> | $\dfrac{13/14-6/7}{2e-5{,}4}$ | $1{,}953540$ | $0{,}18\times10^1$ | $0{,}154$ | $0{,}788\times10^{-1}$ | $0{,}355\times10^1$ | $0{,}154$ | $0{,}817$ |
+> | $(2/9)\cdot(9/7)$ | $0{,}28571$ | $0{,}286$ | $0{,}29\times10^{-3}$ | $0{,}102\times10^{-2}$ | $0{,}284$ | $0{,}171\times10^{-2}$ | $0{,}599\times10^{-2}$ |
+>
+> En la tercera fila el corte da un error mucho mayor que el redondeo ($0{,}817$ vs. $0{,}0788$): esa cuenta involucra una resta de números casi iguales ($13/14 - 6/7$), y el corte amplifica esa pérdida de dígitos significativos más que el redondeo (cancelación catastrófica, se retoma en M2).
+
+---
+
+> [!note] Ejercicios 11 a 15 del P1
+> Quedan pendientes porque requieren el diferencial aplicado a la propagación de errores, tema desarrollado en `M2_Presentacion.pdf` (Módulo 2), no en el material de este módulo.

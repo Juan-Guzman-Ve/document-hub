@@ -1,11 +1,27 @@
 ---
-
-tags: [simulacion, modulo1, UP, sistemas-modelos-simulacion] curso: Simulación modulo: "1" fuentes:
-
-- "M1 Introducción a la Simulación.pdf"
-- "M1 Presentación.pdf"
-- "M1 Crónica Apolo 13.pdf"
-
+tags:
+  - materia/modelos-simulacion
+  - modulo/m1
+  - tipo/teoria
+materia: Modelos y Simulacion
+modulo: M1 - Introduccion a la Simulacion
+tipo: teoria
+fuentes:
+  - "M1 Introduccion a la Simulacion.pdf"
+  - "M1 Presentacion.pdf"
+  - "M1 Cronica Apolo 13.pdf"
+descripcion: Conceptos fundamentales de simulacion — sistema, modelo, simulacion, variables y parametros, clasificaciones (deterministico/estocastico, continuo/discreto, dinamico/estatico), arte de modelar en 8 pasos, aplicaciones por industria, etapas de una simulacion, y caso Apolo 13 como primer gemelo digital (15 simuladores NASA, 1970).
+conceptos_clave:
+  - sistema
+  - modelo
+  - simulacion
+  - metodo de Montecarlo
+  - gemelo digital
+  - sistemas de colas
+  - Von Neumann
+  - Apolo 13
+  - verificacion y validacion
+relacionados: []
 ---
 
 > [!info] Sobre este apunte Compilado a partir de los tres documentos del Módulo 1: el texto teórico completo, la presentación de clase (slides) y la crónica del Apolo 13 (caso de aplicación real). Pensado para repasar en Obsidian con enlaces `[[ ]]` entre conceptos.
@@ -347,3 +363,9 @@ Los **simuladores** usados por la NASA (15 en total) fueron, según el autor, el
 ## Conceptos relacionados (para vincular en Obsidian)
 
 [[Sistema]] · [[Modelo]] · [[Simulación]] · [[Método de Montecarlo]] · [[Sistemas de colas]] · [[Verificación y Validación de modelos]] · [[Gemelo Digital]] · [[Von Neumann]] · [[Apolo 13]]
+---
+
+## Documentos
+- [[M1 - Introduccion a la Simulacion.pdf]]
+- [[M1 - Presentacion.pdf]]
+- [[M1 - Cronica apolo 13.pdf]]

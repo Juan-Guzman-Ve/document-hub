@@ -1,3 +1,18 @@
+---
+tags:
+  - materia/calculo-numerico
+  - tipo/referencia
+materia: Calculo Numerico
+tipo: referencia
+descripcion: Guia de sintaxis LaTeX (MathJax) y Markdown para tomar apuntes de Calculo Numerico en Obsidian. Incluye simbolos, fracciones, matrices, callouts, tablas y diagramas Mermaid.
+conceptos_clave:
+  - LaTeX
+  - MathJax
+  - Markdown
+  - Mermaid
+  - callouts
+---
+
 Guia de referencia de sintaxis para tomar apuntes de la materia. Obsidian usa MathJax (LaTeX) para matemática y Markdown estándar para el resto.
 
 ## 1. Matemática en línea vs bloque

@@ -1,9 +1,26 @@
 ---
+tags:
+  - materia/profesional-ti
+  - modulo/m1
+  - tipo/teoria
 materia: El Profesional de TI
-modulo: 1
+modulo: M1 - Introduccion
 unidad: 1
-tema: El profesional de TI como actor estratégico
+tipo: teoria
 fecha_clase: 2026-08-05
+descripcion: Clase 1 completa — evolucion historica del profesional de TI (7 eras 1940s-2020s), entornos VUCA, cinco competencias estrategicas, marcos normativos (COBIT, ITIL, ISO 38500), y roles CIO/CISO/CDO.
+conceptos_clave:
+  - actor estrategico
+  - VUCA
+  - CIO
+  - CISO
+  - CDO
+  - COBIT
+  - ITIL
+  - ISO 38500
+relacionados:
+  - "[[M2 - IT Governance]]"
+  - "[[M1 - IT Doesnt Matter - Resumen]]"
 ---
 
 # M1 - El Profesional de TI como Actor Estratégico

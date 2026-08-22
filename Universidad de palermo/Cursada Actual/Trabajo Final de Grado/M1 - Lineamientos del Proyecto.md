@@ -1,3 +1,22 @@
+---
+tags:
+  - materia/trabajo-final-grado
+  - modulo/m1
+  - tipo/guia
+materia: Trabajo Final de Grado
+modulo: M1 - Introduccion al TFG
+tipo: guia
+descripcion: Lineamientos del TFG — 4 etapas del proyecto (Idea, Referencias, Esqueleto, Intro/Conclusion/Abstract), formato LaTeX, criterios bibliograficos (10-15 iniciales, 20+ finales), diferencias entre paper/ensayo/informe/tesina, y uso estrategico de IA como asistente en cada etapa.
+conceptos_clave:
+  - paper cientifico
+  - LaTeX
+  - BibTeX
+  - bibliografia
+  - uso de IA en investigacion
+  - metodologia de investigacion
+relacionados: []
+---
+
 # Módulo 1 - Investigación y Uso de IA
 
 ## Presentación del curso
@@ -128,3 +147,9 @@ Riesgos: plagio/autoría, dependencia tecnológica, falta de transparencia, aluc
 3. Ser transparente sobre su uso en el trabajo
 4. Conservar versiones intermedias de los textos como prueba de autoría
 5. Consultar al tutor o la normativa del centro antes de usar herramientas avanzadas
+---
+
+## Documentos
+- [[M1 - Diferencias entre diferentes recursos de investigacion.pdf]]
+- [[M1 - Presentacion.pdf]]
+- [[M1 - Uso de la IA para investigaciones.pdf]]
