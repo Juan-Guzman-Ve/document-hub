@@ -7,6 +7,12 @@ materia: El Profesional de TI
 modulo: M1 - Introduccion
 tipo: debate
 descripcion: Respuestas a las 4 preguntas guia del debate sobre IT Doesnt Matter y enfoque tactico para el Grupo 1 — datos clave, argumentos prioritarios y postura ante la IA generativa.
+conceptos_clave:
+  - tesis de Carr
+  - commoditizacion de TI
+  - escasez vs ubicuidad
+  - debate estrategico
+  - IA generativa
 relacionados:
   - "[[M1 - IT Doesnt Matter - Resumen]]"
   - "[[M1 - Defensores de Carr]]"

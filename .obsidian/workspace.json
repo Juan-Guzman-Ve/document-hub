@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3ce094c0350bd91f",
+        "id": "7a6780513cfb01f0",
         "type": "tabs",
         "children": [
           {
-            "id": "cdce0db6c5720224",
+            "id": "32b72bf99e9048e4",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Documentos/M3 - Busqueda y Planificacion.pdf"
+                "file": "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Modulos/M4 - Analisis de entradas.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "M3 - Busqueda y Planificacion"
+              "icon": "lucide-file",
+              "title": "M4 - Analisis de entradas"
             }
           }
         ]
@@ -193,24 +195,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "eb018de838d6e94d",
+  "active": "32b72bf99e9048e4",
   "lastOpenFiles": [
-    "Personal/Ideas/Finance Tracker.md",
-    "Universidad de palermo/_REGLAS_APUNTES.md.tmp.26072.21fe58e08ad8",
-    "Universidad de palermo/_REGLAS_APUNTES.md.tmp.26072.c18a02f0c901",
-    "Universidad de palermo/_REGLAS_APUNTES.md.tmp.26072.f53ad6b4ab3b",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores.md",
-    "Universidad de palermo/_REGLAS_APUNTES.md",
-    "Universidad de palermo/_REGLAS_APUNTES.md.tmp.26072.e0d0ac2ab31b",
-    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Documentos/M3 - Busqueda y Planificacion.pdf",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1/M1 - Teoria de errores.md",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores.md.tmp.6212.274012aeefcc",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores.md.tmp.6212.c60be6398438",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Modulos/M3 - Sistemas estocasticos, probabilidad y estadistica.md",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Modulos/M4 - Analisis de entradas.md",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Documentos/M4.1 - Presentacion.pdf",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Documentos/M4 - Apunte Analisis de Entradas.pdf",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Documentos/M3 - Introduccion a sistemas estocasticos.pdf",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Documentos/M3.1 - Presentacion.pdf",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 3",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Documentos/P1 - Teoria de errores.pdf",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Ejercicios 11 a 15 (P1).md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Documentos/M2.2 - Aplicación del diferencial al cáculo de errores.pdf",
     "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1/M1 - Ejercicios.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1/M1 - Teoria de errores.md",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores.md",
     "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Actividad.md",
     "Universidad de palermo/Cursada Actual/Calculo Numerico/Documentos/M1 - Introduccion al calculo numerico.pdf",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/M1 - Uso de la IA para investigaciones.pdf",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Documentos/M1 - Presentacion.pdf",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Documentos/M2.1 - Problemas en aritmetica de digitos finitos.pdf",
+    "Universidad de palermo/Cursada Actual/Calculo Numerico/Documentos/M3 - Metodo de biseccion.pdf",
+    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Modulos/M2 - Sistemas discretos deterministicos.md",
+    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Modulos/M3 - Busqueda y Planificacion.md",
+    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Actividades/M1 - La etica como condicion necesaria del avance de la IA.md",
+    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Actividades/M3 - busqueda informada.md",
+    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Modulos/M2 - Agentes.md",
+    "Universidad de palermo/Cursada Actual/Inteligencia Artificial/Modulos/M1 - Intro a la IA.md",
+    "CLAUDE.md",
+    "Personal/Ideas/Finance Tracker.md",
+    "Universidad de palermo/_REGLAS_APUNTES.md",
     "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/_INDICE.md",
     "Universidad de palermo/Cursada Actual/Calculo Numerico/_INDICE.md",
     "Universidad de palermo/Cursada Actual/Calculo Numerico/0 - Referencia Obsidian y LaTeX.md",
@@ -221,16 +233,6 @@
     "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/Modulo 1.md",
     "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Modulos/M1 - Introduccion a la Simulacion.md",
     "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M2 - Governance/M2 - IT Governance.md",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/0 - Informacion General.md",
-    "Universidad de palermo/Cursada Actual/Trabajo Final de Grado/M1 - Lineamientos del Proyecto.md",
-    "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - Resumen Conciso.md",
-    "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - Debate Guia.md",
-    "Universidad de palermo/Cursada Actual/Modelos y Simulacion/Modulos/Módulo 1 — Introducción a la Simulación.md",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del diferencial al calbulo de errores.md",
-    "Universidad de palermo/Cursada Actual/El Profesional de TI/Modulos/M1 - Introduccion/M1 - Resumen completo.md",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1 -/M1 - Teoria de errores.md",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Modulos/Modulo 1 -/M1 - Ejercicios.md",
-    "Universidad de palermo/Cursada Actual/Calculo Numerico/Informacion General.md",
     "Untitled.canvas",
     "Resources/Pasted image 20260419145706.png",
     "Resources/Pasted image 20260310190159.png",

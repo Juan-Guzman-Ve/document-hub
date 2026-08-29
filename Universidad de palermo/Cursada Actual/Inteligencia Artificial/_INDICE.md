@@ -15,12 +15,16 @@ descripcion: Indice de la materia Inteligencia Artificial — modulos y activida
 ## Modulo 2 — Agentes Inteligentes
 - [[Modulos/M2 - Agentes|M2 - Agentes Inteligentes]] — definicion, tipos de agentes (5 categorias), racionalidad, propiedades de ambientes
 
+## Modulo 3 — Busqueda y Planificacion
+- [[Modulos/M3 - Busqueda y Planificacion|M3 - Busqueda y Planificacion]] — BFS, DFS, algoritmo A* (F=G+H, listas abierta/cerrada), Minimax
+
 ## Actividades
 - [[Actividades/M1 - La etica como condicion necesaria del avance de la IA|M1 - La etica en IA (ensayo)]] — etica como condicion estructural del avance de la IA
 
 ## Documentos de referencia
-- `Documents/M1 - Introduccion a la IA.pdf`
-- `Documents/M2 - Agentes Inteligentes.pdf`
+- `Documentos/M1 - Introduccion a la IA.pdf`
+- `Documentos/M2 - Agentes Inteligentes.pdf`
+- `Documentos/M3 - Busqueda y Planificacion.pdf`
 
 ## Conceptos transversales
 Espacio de estados → [[Modulos/M1 - Intro a la IA#5. Representación formal de problemas|M1 §5]]

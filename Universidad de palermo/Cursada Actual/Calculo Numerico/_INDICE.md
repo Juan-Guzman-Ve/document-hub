@@ -14,12 +14,12 @@ descripcion: Indice de la materia Calculo Numerico — modulos, ejercicios y ref
 - [[0 - Referencia Obsidian y LaTeX|Referencia de sintaxis LaTeX y Markdown]]
 
 ## Modulo 1 — Teoria de errores
-- [[Modulos/Modulo 1/M1 - Teoria de errores|M1 - Teoria de errores]] — punto flotante, digitos significativos, errores absoluto/relativo
-- [[Modulos/Modulo 1/M1 - Ejercicios|M1 - Practico N1 resuelto]] — ejercicios 1-10
+- [[Modulos/M1 - Introduccion/M1 - Teoria de errores|M1 - Teoria de errores]] — punto flotante, digitos significativos, errores absoluto/relativo
+- [[Modulos/M1 - Introduccion/M1 - Ejercicios|M1 - Practico N1 resuelto]] — ejercicios 1-10
 
 ## Modulo 2 — Diferencial aplicado al calculo de errores
-- [[Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores|M2 - Aplicacion del diferencial]] — cancelacion catastrofica, Horner, propagacion
-- [[Modulos/Modulo 2/M2 - Actividad|M2 - Actividad]]
+- [[Modulos/M2 - Diferencial y Problemas Especificos/M2 - Aplicacion del Diferencial al Calculo de Errores|M2 - Aplicacion del diferencial]] — cancelacion catastrofica, Horner, propagacion
+- [[Modulos/M2 - Diferencial y Problemas Especificos/M2 - Ejercicios 11 a 15 (P1)|M2 - Practico N1 resuelto]] — ejercicios 11-15
 
 ## Proximos modulos (segun cronograma)
 - M3 — Newton-Raphson (20/8)

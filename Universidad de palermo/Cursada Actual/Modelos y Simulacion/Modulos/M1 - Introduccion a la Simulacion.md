@@ -21,7 +21,8 @@ conceptos_clave:
   - Von Neumann
   - Apolo 13
   - verificacion y validacion
-relacionados: []
+relacionados:
+  - "[[M2 - Sistemas discretos deterministicos]]"
 ---
 
 > [!info] Sobre este apunte Compilado a partir de los tres documentos del Módulo 1: el texto teórico completo, la presentación de clase (slides) y la crónica del Apolo 13 (caso de aplicación real). Pensado para repasar en Obsidian con enlaces `[[ ]]` entre conceptos.

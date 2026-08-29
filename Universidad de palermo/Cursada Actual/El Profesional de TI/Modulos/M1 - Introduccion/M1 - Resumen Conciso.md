@@ -7,6 +7,12 @@ materia: El Profesional de TI
 modulo: M1 - Introduccion
 tipo: resumen
 descripcion: Resumen ultra-condensado del articulo de Carr y el debate — tesis en un parrafo, 5 puntos clave, tabla rapida con las 14 posturas del debate, y nota de estrategia para Grupo 1.
+conceptos_clave:
+  - tesis de Carr
+  - commoditizacion de TI
+  - escasez vs ubicuidad
+  - ventaja competitiva
+  - debate estrategico
 relacionados:
   - "[[M1 - IT Doesnt Matter - Resumen]]"
   - "[[M1 - Defensores de Carr]]"

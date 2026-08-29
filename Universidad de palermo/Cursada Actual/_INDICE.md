@@ -21,16 +21,21 @@ descripcion: Mapa principal de la cursada actual en la Universidad de Palermo â€
 ## Accesos rapidos por tipo de contenido
 
 ### Teoria
-- [[Calculo Numerico/Modulos/Modulo 1/M1 - Teoria de errores|Calculo Numerico M1 - Teoria de errores]]
-- [[Calculo Numerico/Modulos/Modulo 2/M2 - Aplicacion del Diferencial al Calculo de Errores|Calculo Numerico M2 - Diferencial al calculo de errores]]
+- [[Calculo Numerico/Modulos/M1 - Introduccion/M1 - Teoria de errores|Calculo Numerico M1 - Teoria de errores]]
+- [[Calculo Numerico/Modulos/M2 - Diferencial y Problemas Especificos/M2 - Aplicacion del Diferencial al Calculo de Errores|Calculo Numerico M2 - Diferencial al calculo de errores]]
 - [[El Profesional de TI/Modulos/M1 - Introduccion/M1 - Resumen completo|Prof TI M1 - Resumen completo]]
 - [[El Profesional de TI/Modulos/M2 - Governance/M2 - IT Governance|Prof TI M2 - IT Governance]]
 - [[Inteligencia Artificial/Modulos/M1 - Intro a la IA|IA M1 - Introduccion a la IA]]
 - [[Inteligencia Artificial/Modulos/M2 - Agentes|IA M2 - Agentes Inteligentes]]
+- [[Inteligencia Artificial/Modulos/M3 - Busqueda y Planificacion|IA M3 - Busqueda y Planificacion]]
 - [[Modelos y Simulacion/Modulos/M1 - Introduccion a la Simulacion|Simulacion M1 - Introduccion]]
+- [[Modelos y Simulacion/Modulos/M2 - Sistemas discretos deterministicos|Simulacion M2 - Sistemas Discretos Deterministicos y Redes de Petri]]
+- [[Modelos y Simulacion/Modulos/M3 - Sistemas estocasticos, probabilidad y estadistica|Simulacion M3 - Sistemas Estocasticos, Probabilidad y Estadistica]]
+- [[Modelos y Simulacion/Modulos/M4 - Analisis de entradas|Simulacion M4 - Analisis de Entradas]]
 
 ### Ejercicios y actividades
-- [[Calculo Numerico/Modulos/Modulo 1/M1 - Ejercicios|Calculo Numerico M1 - Practico N1]]
+- [[Calculo Numerico/Modulos/M1 - Introduccion/M1 - Ejercicios|Calculo Numerico M1 - Practico N1 (ejercicios 1-10)]]
+- [[Calculo Numerico/Modulos/M2 - Diferencial y Problemas Especificos/M2 - Ejercicios 11 a 15 (P1)|Calculo Numerico M2 - Practico N1 (ejercicios 11-15)]]
 - [[Inteligencia Artificial/Actividades/M1 - La etica como condicion necesaria del avance de la IA|IA - Etica en IA (ensayo)]]
 
 ### Debate (Prof TI)

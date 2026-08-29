@@ -25,9 +25,9 @@ descripcion: Indice del Trabajo Final de Grado — lineamientos y recursos.
 - Contacto rapido: Pronto (mensajeria instantanea)
 
 ## Documentos de referencia (Modulo 1)
-- `Documentos/Modulo 1/M1 - Diferencias entre diferentes recursos de investigacion.pdf`
-- `Documentos/Modulo 1/M1 - Presentacion.pdf`
-- `Documentos/Modulo 1/M1 - Uso de la IA para investigaciones.pdf`
+- `Documentos/M1 - Diferencias entre diferentes recursos de investigacion.pdf`
+- `Documentos/M1 - Presentacion.pdf`
+- `Documentos/M1 - Uso de la IA para investigaciones.pdf`
 
 ## Lineas tematicas sugeridas
 IoT · Business Intelligence · Inteligencia Artificial · Arquitectura de software · Blockchain y Criptografia

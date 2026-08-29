@@ -19,6 +19,7 @@ conceptos_clave:
   - ambiente deterministico
 relacionados:
   - "[[M1 - Intro a la IA]]"
+  - "[[M3 - Busqueda y Planificacion]]"
 ---
 
 # Módulo 2 - Agentes Inteligentes

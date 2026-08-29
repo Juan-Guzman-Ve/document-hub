@@ -17,6 +17,7 @@ conceptos_clave:
   - Conferencia Dartmouth
 relacionados:
   - "[[M2 - Agentes]]"
+  - "[[M3 - Busqueda y Planificacion]]"
 ---
 
 > [!info] Resumen Este módulo cubre los orígenes históricos de la IA, sus definiciones formales, el concepto de "sistema inteligente", el Test de Turing y la representación formal de problemas (espacio de estados, operadores, soluciones).
